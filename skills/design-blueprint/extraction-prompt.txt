@@ -1,0 +1,1 @@
+Extract the brand's design system from the page. Read the rawHtml format when available for CSS variables and font-family declarations. For copy_tone fields, use verbatim text from the page (no paraphrasing). For colors/fonts you cannot find in the actual page CSS or markdown, use null — do not invent. For paywalled or empty pages, return only {"error": "<short reason>"}.
