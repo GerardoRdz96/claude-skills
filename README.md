@@ -12,122 +12,32 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 > **Caveat:** these were written for MY repo layout. Many reference wiki pages (`references/*.md`), scripts (`scripts/*`), or registries that live in my private repo and are not included here. Treat each skill as a working SOP pattern to adapt, not a plug-and-play package. Paths and personal identifiers were genericized before publishing.
 
-## Catalog
+## Contents
 
-### Building & Shipping
+- [Building & Shipping](#building-shipping) (3)  -  From idea to shipped product: forges, builders, and launch flows.
+- [Meta-skills](#meta-skills-skills-that-build-skillsagents) (19)  -  The system improving itself: skills that create skills, agents, routines, and frameworks.
+- [Research & Knowledge](#research-knowledge) (9)  -  Everything that feeds the knowledge wiki: deep research, ingestion, recall.
+- [Quality & Review](#quality-review) (7)  -  Gates and audits: nothing ships unchecked.
+- [Money & Freelance](#money-freelance) (3)  -  The commercial engine: ideas judged, leads worked, bids drafted.
+- [Media & Presentation](#media-presentation) (3)  -  Making work visible: design, video, presentations.
+- [Ops & Automation](#ops-automation) (3)  -  Recurring cadence and orchestration: the system running itself.
+- [Life & Personal](#life-personal) (4)  -  The assistant beyond work: voice, learning, life planning.
+
+
+## Building & Shipping
 
 <img src="docs/img/building-shipping.png" width="640" alt="Building & Shipping">
 
-| Skill | What it does |
+From idea to shipped product: forges, builders, and launch flows.
+
+| Skill | One-liner |
 |---|---|
-| [`deepfork`](skills/deepfork/SKILL.md) | Reverse-engineer any open-source repo into a clean understanding doc and a rebuildable blueprint, then clean-room rebuild your own customized version. |
-| [`ponytail`](skills/ponytail/SKILL.md) | The laziest senior dev in the room, a standing bias that replaces fifty lines with one. |
-| [`taste-skill`](skills/taste-skill/SKILL.md) | Anti-slop frontend design doctrine that reads the brief, picks a real design system, and gates the build behind a 60-plus-item pre-flight checklist before it ships. |
+| [`deepfork`](#user-content-skill-deepfork) | Reverse-engineer any open-source repo into a clean understanding doc and a rebuildable blueprint, then clean-room rebuild your own customized version. |
+| [`ponytail`](#user-content-skill-ponytail) | The laziest senior dev in the room, a standing bias that replaces fifty lines with one. |
+| [`taste-skill`](#user-content-skill-taste-skill) | Anti-slop frontend design doctrine that reads the brief, picks a real design system, and gates the build behind a 60-plus-item pre-flight checklist before it ships. |
 
-### Meta-skills (skills that build skills/agents)
-
-<img src="docs/img/meta-skills.png" width="640" alt="Meta-skills (skills that build skills/agents)">
-
-| Skill | What it does |
-|---|---|
-| [`agent-builder`](skills/agent-builder/SKILL.md) | Decision-gated builder for Claude Code subagents, with a Discovery Interview before any file is written. |
-| [`agents-team-builder`](skills/agents-team-builder/SKILL.md) | Guided discovery interview that scaffolds a 2-5 agent Claude Code team with peer messaging, file ownership, and a rerunnable invocation template. |
-| [`ai-apply`](skills/ai-apply/SKILL.md) | A one-question-at-a-time interview that decides whether AI belongs in a task at all, and how deep, before anyone builds anything. |
-| [`audit`](skills/audit/SKILL.md) | Scores your Claude Code setup against the Four Cs and hands you the top 3 highest-leverage fixes. |
-| [`build`](skills/build/SKILL.md) | Routes any non-trivial build through triage, Superpowers planning, risk-based execution (TDD vs GSD), and mandatory adversarial review. |
-| [`capability-radar`](skills/capability-radar/SKILL.md) | Detects when your own work has produced enough signal to justify building a new skill, agent, routine, or tool , then routes the decision through a risk-tiered, Codex-reviewed build gate. |
-| [`fable-mode`](skills/fable-mode/SKILL.md) | Borrow a frontier model's discipline, not its weights: five gates any model can run. |
-| [`framework-builder`](skills/framework-builder/SKILL.md) | Turns repeated thinking into a named, executable decision framework: rubric in, action out. |
-| [`grill-me`](skills/grill-me/SKILL.md) | Test |
-| [`hooks-builder`](skills/hooks-builder/SKILL.md) | Designs, builds, and audits Claude Code hooks , the event-driven shell layer that fires deterministically on session/tool events. |
-| [`level-up`](skills/level-up/SKILL.md) | Weekly interview that finds one automation opportunity and ships it as a real artifact, using the Mindset-Method-Machine pipeline. |
-| [`loops-builder`](skills/loops-builder/SKILL.md) | Designs, audits, and optimizes agent loops (the depth primitive) with mandatory hard caps and objective done-checks, routing to the right mechanism (/goal, /loop, bash Ralph loop, dynamic workflow, or Cloud Routine). |
-| [`multi-brain`](skills/multi-brain/SKILL.md) | Auto-routes sub-tasks (code review, vision/OCR, whole-repo scans, long-horizon coding) to the right specialist LLM while Claude stays the orchestrator in front of the user. |
-| [`onboard`](skills/onboard/SKILL.md) | Day-1 onboarding wizard for a freshly cloned personal-AIOS starter kit , 7-question intake plus one-shot file scaffold. |
-| [`plugin-builder`](skills/plugin-builder/SKILL.md) | Packages Claude Code skills, agents, hooks, and MCP servers into distributable, installable plugins and marketplaces. |
-| [`routines-builder`](skills/routines-builder/SKILL.md) | Test tagline |
-| [`skill-builder`](skills/skill-builder/SKILL.md) | Guides building, auditing, and optimizing Claude Code skills via a discovery interview and an official-best-practices checklist. |
-| [`skill-harvest`](skills/skill-harvest/SKILL.md) | test |
-| [`workaround-builder`](skills/workaround-builder/SKILL.md) | A structured creative-research engine that finds a legitimate alternate route whenever a build hits an external wall (gated API, broken tool, ToS ban, quota limit) instead of giving up or grabbing the first hack. |
-| [`workflow-builder`](skills/workflow-builder/SKILL.md) | Interactive builder that turns a width-shaped task into a saved, bounded, parallel-fan-out workflow file for Claude Code. |
-
-### Research & Knowledge
-
-<img src="docs/img/research-knowledge.png" width="640" alt="Research & Knowledge">
-
-| Skill | What it does |
-|---|---|
-| [`cowatch`](skills/cowatch/SKILL.md) | Co-watch a public live stream with your assistant: rolling local transcript, near-real-time reactions. |
-| [`nate-watch`](skills/nate-watch/SKILL.md) | Watches a favorite creator's video feed and files new uploads into your knowledge wiki, human-gated. |
-| [`radar-harvest`](skills/radar-harvest/SKILL.md) | Mines the full daily tech-news fetch into the wiki and turns release signals into adoption decisions. |
-| [`rag-forge`](skills/rag-forge/SKILL.md) | Scaffolds a real, local-first contextual-retrieval RAG pipeline , chunk, hybrid-embed, fuse, cite , in four tested scripts. |
-| [`rnd-loop`](skills/rnd-loop/SKILL.md) | Chains deep research and a throwaway prototype spike into one evidence-backed GO/NO-GO/PIVOT decision. |
-| [`spark`](skills/spark/SKILL.md) | Turns any idea or technique into a throwaway prototype, measures it against a baseline, and hands back a decision-grade GO/NO-GO/PIVOT verdict. |
-| [`storm-research`](skills/storm-research/SKILL.md) | Five adversarial expert lenses, a contradiction map, and cross-lineage citation verification turn one topic into a trustworthy, shareable HTML briefing. |
-| [`study`](skills/study/SKILL.md) | Turn any note you have saved into a quiz that makes you actually remember it. |
-
-### Quality & Review
-
-<img src="docs/img/quality-review.png" width="640" alt="Quality & Review">
-
-| Skill | What it does |
-|---|---|
-| [`aegis`](skills/aegis/SKILL.md) | Turns any AI system into a scored NIST AI RMF audit-readiness report plus a tested incident-response playbook. |
-| [`eval`](skills/eval/SKILL.md) | Scores a code diff against a weighted JSON rubric using an independent-lineage judge (Codex), so review never marks its own homework. |
-| [`prompt-eval`](skills/prompt-eval/SKILL.md) | Puts an objective, repeatable score on any prompt or system prompt by running it across a test dataset and grading the outputs. |
-| [`rlsgate`](skills/rlsgate/SKILL.md) | Pre-deploy security gate that catches RLS holes, exposed secrets, and public buckets in Supabase-backed apps before you ship. |
-| [`roast`](skills/roast/SKILL.md) | A five-persona adversarial council that pressure-tests an idea and hands back one GO/RESHAPE/KILL verdict before you build. |
-| [`verify-loop`](skills/verify-loop/SKILL.md) | Turns "looks done" into "proven working" via a build-time verification loop plus a separate adversarial stress-test pass. |
-| [`verify-specifics`](skills/verify-specifics/SKILL.md) | Turns any AI-drafted prose into a checklist of exactly what to fact-check before you hit publish. |
-
-### Money & Freelance
-
-<img src="docs/img/money-freelance.png" width="640" alt="Money & Freelance">
-
-| Skill | What it does |
-|---|---|
-| [`bottleneck`](skills/bottleneck/SKILL.md) | Find the one constraint actually capping your business, and build an action plan around it instead of everything else. |
-| [`clay-leads`](skills/clay-leads/SKILL.md) | Sources and enriches B2B leads through Clay's official agent plugin, then drafts personalized outreach copy into a campaign-ready CSV, never sending anything itself. |
-| [`workana`](skills/workana/SKILL.md) | Scans Workana's public job board for fit-ranked freelance leads and drafts a tailored, ready-to-paste bid, read-only and human-submitted. |
-
-### Media & Presentation
-
-<img src="docs/img/media-presentation.png" width="640" alt="Media & Presentation">
-
-| Skill | What it does |
-|---|---|
-| [`design-blueprint`](skills/design-blueprint/SKILL.md) | Turn any URL into a concrete, evidence-backed design system you can build from. |
-| [`forge`](skills/forge/SKILL.md) | A 5-phase kickoff-to-production pipeline that takes a new client or product idea from first onboarding call to deployed, reviewed, registered software. |
-| [`present`](skills/present/SKILL.md) | Turn any wiki page or topic into a polished, self-contained HTML slide deck in minutes. |
-
-### Ops & Automation
-
-<img src="docs/img/ops-automation.png" width="640" alt="Ops & Automation">
-
-| Skill | What it does |
-|---|---|
-| [`meeting-hud`](skills/meeting-hud/SKILL.md) | Near-real-time meeting intelligence HUD , captures audio, transcribes locally with whisper, and surfaces action items, decisions, and open questions live, with a hard local-only gate for sensitive meetings. |
-| [`servy-routine`](skills/servy-routine/SKILL.md) | Builds and arms cloud-scheduled Claude Code routines with safe-by-default guardrails baked in. |
-| [`session-handoff`](skills/session-handoff/SKILL.md) | Writes a tool-agnostic handoff note so any fresh session (or a different tool entirely) can pick up work cold. |
-
-### Life & Personal
-
-<img src="docs/img/life-personal.png" width="640" alt="Life & Personal">
-
-| Skill | What it does |
-|---|---|
-| [`finances`](skills/finances/SKILL.md) | Deterministic personal-finance brain for logging expenses, tracking envelope budgets, closing pay periods, and planning debt payoff. |
-| [`rnd`](skills/rnd/SKILL.md) | A gamified XP/quest system that turns "become an expert R&D engineer" into a daily climb across 7 competency pillars. |
-| [`talk`](skills/talk/SKILL.md) | test |
-| [`wheel-of-life`](skills/wheel-of-life/SKILL.md) | A structured, interview-driven "wheel of life" check-in that scores 9 life spokes on evidence, not vibes, and ends with one 90-day plan. |
-
----
-
-## The skills, in detail
-
-### `deepfork`
-
-*Reverse-engineer any open-source repo into a clean understanding doc and a rebuildable blueprint, then clean-room rebuild your own customized version.*
+<details id="skill-deepfork">
+<summary><b><code>deepfork</code></b> · Reverse-engineer any open-source repo into a clean understanding doc and a rebuildable blueprint, then clean-room rebuild your own customized version.</summary>
 
 DeepFork is a five-phase pipeline that turns "how does X work" or "rebuild X but with Y" into a structured reverse-engineering and clean-room rebuild process. It fires whenever the user wants to understand a repo's architecture, learn how an open-source tool works internally, or fork a tool's design (not its code) with their own customizations. All outputs land in `deepfork-out/<target-name>/` in the working directory, so nothing pollutes the eventual rebuild repo.
 
@@ -135,9 +45,12 @@ The pipeline runs in order and never skips its license gate: Phase 0 checks the 
 
 What's distinctive is the "fork the design, not the code" discipline: a hard IP/legality gate up front, mandatory clean-room separation during implementation (no reading original source while writing the rebuild), honesty labeling of every architectural claim as verified-by-reading versus inferred-from-graph, and an explicit closing check that the deltas the user asked for actually show up. It composes with `graphify` for the comprehension phase but degrades gracefully to manual analysis without it, and its guardrails cap scope (pick one subsystem for repos over 5k files) and always keep `deepfork-out/` out of the shipped rebuild.
 
-### `ponytail`
+➡️ [Read the full skill](skills/deepfork/SKILL.md)
 
-*The laziest senior dev in the room, a standing bias that replaces fifty lines with one.*
+</details>
+
+<details id="skill-ponytail">
+<summary><b><code>ponytail</code></b> · The laziest senior dev in the room, a standing bias that replaces fifty lines with one.</summary>
 
 Ponytail is a YAGNI discipline skill that changes how Claude Code approaches writing and reviewing code, biasing it toward the smallest thing that actually works. It positions itself as "the laziest senior dev in the room." Before writing any code, it walks a six-rung ladder and stops at the first rung that holds: does this need to exist at all, does the stdlib do it, does a native platform feature do it, does an already-installed dependency do it, is it one line, and only then write the minimum that works. It explicitly carves out what laziness never applies to: trust-boundary validation, data-loss handling, security, and accessibility are always written in full, even in the laziest version.
 
@@ -146,9 +59,12 @@ It fires automatically before writing new code and during planning steps of larg
 A distinctive convention is a shortcut comment marker, used to flag deliberate shortcuts with a named ceiling and upgrade path so a "later" does not silently become "never." A bundled Python script greps git-tracked files for these markers across all common comment styles, dedups against previously harvested entries, and appends only new ones to a running follow-up list, a clean generic pattern any repo could reuse regardless of what that list is called. The skill also candidly flags that the popular benchmark number behind this style of discipline is real but model-conditional and should not be quoted as a guarantee, a nice bit of intellectual honesty for a public showcase.</description>
 </invoke>
 
-### `taste-skill`
+➡️ [Read the full skill](skills/ponytail/SKILL.md)
 
-*Anti-slop frontend design doctrine that reads the brief, picks a real design system, and gates the build behind a 60-plus-item pre-flight checklist before it ships.*
+</details>
+
+<details id="skill-taste-skill">
+<summary><b><code>taste-skill</code></b> · Anti-slop frontend design doctrine that reads the brief, picks a real design system, and gates the build behind a 60-plus-item pre-flight checklist before it ships.</summary>
 
 taste-skill is a frontend design skill for landing pages, portfolios, and redesigns (explicitly not for dashboards, data tables, wizards, or admin UI). It exists to stop LLM-generated interfaces from looking templated: AI-purple gradients, centered hero over dark mesh, three equal feature cards, Inter + slate-900, generic glassmorphism. It fires when the user asks to design or redesign a landing page, portfolio, or site, or asks to make a UI "not look AI-generated."
 
@@ -158,17 +74,52 @@ What is distinctive is the closing Final Pre-Flight Check: a roughly 60-item che
 
 Two cross-references point at sibling doctrine files (references/website-design-levels.md, references/design-swipe-file.md) that live in the private Servy repo and will not exist in a public copy; a public release should note this as a known gap rather than a security concern, since nothing sensitive is being omitted.
 
-### `agent-builder`
+➡️ [Read the full skill](skills/taste-skill/SKILL.md)
 
-*Decision-gated builder for Claude Code subagents, with a Discovery Interview before any file is written.*
+</details>
+
+
+## Meta-skills (skills that build skills/agents)
+
+<img src="docs/img/meta-skills.png" width="640" alt="Meta-skills">
+
+The system improving itself: skills that create skills, agents, routines, and frameworks.
+
+| Skill | One-liner |
+|---|---|
+| [`agent-builder`](#user-content-skill-agent-builder) | Decision-gated builder for Claude Code subagents, with a Discovery Interview before any file is written. |
+| [`agents-team-builder`](#user-content-skill-agents-team-builder) | Guided discovery interview that scaffolds a 2-5 agent Claude Code team with peer messaging, file ownership, and a rerunnable invocation template. |
+| [`ai-apply`](#user-content-skill-ai-apply) | A one-question-at-a-time interview that decides whether AI belongs in a task at all, and how deep, before anyone builds anything. |
+| [`audit`](#user-content-skill-audit) | Scores your Claude Code setup against the Four Cs and hands you the top 3 highest-leverage fixes. |
+| [`build`](#user-content-skill-build) | Routes any non-trivial build through triage, Superpowers planning, risk-based execution (TDD vs GSD), and mandatory adversarial review. |
+| [`capability-radar`](#user-content-skill-capability-radar) | Detects when your own work has produced enough signal to justify building a new skill, agent, routine, or tool  -  then routes the decision through a risk-tiered, Codex-reviewed build gate. |
+| [`fable-mode`](#user-content-skill-fable-mode) | Borrow a frontier model's discipline, not its weights: five gates any model can run. |
+| [`framework-builder`](#user-content-skill-framework-builder) | Turns repeated thinking into a named, executable decision framework: rubric in, action out. |
+| [`hooks-builder`](#user-content-skill-hooks-builder) | Designs, builds, and audits Claude Code hooks  -  the event-driven shell layer that fires deterministically on session/tool events. |
+| [`level-up`](#user-content-skill-level-up) | Weekly interview that finds one automation opportunity and ships it as a real artifact, using the Mindset-Method-Machine pipeline. |
+| [`loops-builder`](#user-content-skill-loops-builder) | Designs, audits, and optimizes agent loops (the depth primitive) with mandatory hard caps and objective done-checks, routing to the right mechanism (/goal, /loop, bash Ralph loop, dynamic workflow, or Cloud Routine). |
+| [`multi-brain`](#user-content-skill-multi-brain) | Auto-routes sub-tasks (code review, vision/OCR, whole-repo scans, long-horizon coding) to the right specialist LLM while Claude stays the orchestrator in front of the user. |
+| [`onboard`](#user-content-skill-onboard) | Day-1 onboarding wizard for a freshly cloned personal-AIOS starter kit  -  7-question intake plus one-shot file scaffold. |
+| [`plugin-builder`](#user-content-skill-plugin-builder) | Packages Claude Code skills, agents, hooks, and MCP servers into distributable, installable plugins and marketplaces. |
+| [`routines-builder`](#user-content-skill-routines-builder) | Decision-gated builder for recurring automation: picks the right cadence mechanism, then scaffolds it safely. |
+| [`skill-builder`](#user-content-skill-skill-builder) | Guides building, auditing, and optimizing Claude Code skills via a discovery interview and an official-best-practices checklist. |
+| [`skill-harvest`](#user-content-skill-skill-harvest) | Mines your real session history for repeated manual work that should have been a skill by now. |
+| [`workaround-builder`](#user-content-skill-workaround-builder) | A structured creative-research engine that finds a legitimate alternate route whenever a build hits an external wall (gated API, broken tool, ToS ban, quota limit) instead of giving up or grabbing the first hack. |
+| [`workflow-builder`](#user-content-skill-workflow-builder) | Interactive builder that turns a width-shaped task into a saved, bounded, parallel-fan-out workflow file for Claude Code. |
+
+<details id="skill-agent-builder">
+<summary><b><code>agent-builder</code></b> · Decision-gated builder for Claude Code subagents, with a Discovery Interview before any file is written.</summary>
 
 Invoked explicitly as `/agent-builder`, this skill guides building, optimizing, or auditing Claude Code subagents (`.claude/agents/*.md`). Its first job is deciding whether the thing you asked for should even BE an agent: a decision gate checks whether deterministic scripts, a skill, or a routine would serve better before any agent file exists.
 
 Once an agent is justified, it runs a Discovery Interview (goals, tools, triggers, risk surface) and only then writes the agent definition with an appropriate tool allowlist and model choice. It deliberately disables model auto-invocation so a stray phrase like "make me an agent" never scaffolds files without the owner asking for it. That combination of gate first, interview second, files last is the whole point: fewer agents, better scoped.
 
-### `agents-team-builder`
+➡️ [Read the full skill](skills/agent-builder/SKILL.md)
 
-*Guided discovery interview that scaffolds a 2-5 agent Claude Code team with peer messaging, file ownership, and a rerunnable invocation template.*
+</details>
+
+<details id="skill-agents-team-builder">
+<summary><b><code>agents-team-builder</code></b> · Guided discovery interview that scaffolds a 2-5 agent Claude Code team with peer messaging, file ownership, and a rerunnable invocation template.</summary>
 
 agents-team-builder is a meta-skill that designs and launches Claude Code "agent teams"  -  small groups (2 to 5) of specialized agents that share a task list, message each other peer-to-peer, and work in parallel on one goal. It fires on natural-language triggers like "build an agent team", "set up a Claude agent team", "spin up a team of teammates", or the explicit `/agents-team-builder` command. It positions itself as one option on an orchestration ladder alongside sub-agents, dynamic workflows, and `/goal` loops, and its first job is talking the user out of a team if a cheaper mechanism fits better.
 
@@ -176,9 +127,12 @@ The skill runs in seven phases. Phase 0 checks that its knowledge source file ex
 
 What is distinctive is the discipline baked into the interview: it explicitly refuses to pre-fill role definitions (to avoid sloppy file-ownership and overlapping responsibilities), it separates "build the team template" (cheap) from "fire the team" (expensive, N parallel sessions) and never auto-fires on the user's behalf, and it defaults to a human-approval-first run pattern that can be relaxed once the team's pattern is proven. It recommends 3 teammates as the sweet spot for most goals. The skill is entirely generic to Claude Code's agent-teams feature and carries no references to any employer, product brand, or personal data  -  every reference is to sibling builder skills and to public Claude Code mechanics (tmux for per-agent visibility, environment flags, model selection).
 
-### `ai-apply`
+➡️ [Read the full skill](skills/agents-team-builder/SKILL.md)
 
-*A one-question-at-a-time interview that decides whether AI belongs in a task at all, and how deep, before anyone builds anything.*
+</details>
+
+<details id="skill-ai-apply">
+<summary><b><code>ai-apply</code></b> · A one-question-at-a-time interview that decides whether AI belongs in a task at all, and how deep, before anyone builds anything.</summary>
 
 ai-apply is a decision skill, not a builder. Given a task or workflow, it walks the user through a six-question "AI Applicability Framework" one question at a time, grill-me style, and lands on one of three honest verdicts: adopt (automate it), augment (AI-assisted, human stays in the loop), or skip (don't build this at all). It exists specifically to answer "to what extent could AI be leveraged here?" one step upstream of any build/skill/agent/automation work, so effort doesn't get spent automating something that should just be eliminated or left alone.
 
@@ -186,9 +140,12 @@ It fires when the user is unsure whether AI is the right call for something, or 
 
 What's distinctive is the discipline of early-exit and honest "skip is a win" framing: if question 1 says the task should be eliminated, or question 5 hits a hard data-gate with no safe re-route, the interview short-circuits straight to a verdict instead of dragging through all six questions to justify a build. The scoring rubric that closes it out is deliberately judgment-based rather than arithmetic ("one hard NO can sink a strong case"), and it defaults to the lower-autonomy AUGMENT option whenever the case for ADOPT isn't airtight, letting real usage promote it later. It ends by handing off to whichever downstream builder skill/agent/routine fits the verdict, rather than building anything itself.
 
-### `audit`
+➡️ [Read the full skill](skills/ai-apply/SKILL.md)
 
-*Scores your Claude Code setup against the Four Cs and hands you the top 3 highest-leverage fixes.*
+</details>
+
+<details id="skill-audit">
+<summary><b><code>audit</code></b> · Scores your Claude Code setup against the Four Cs and hands you the top 3 highest-leverage fixes.</summary>
 
 The `audit` skill runs a structural health check on a Claude Code project, answering one question: "is the AIOS built right?" It fires when someone asks for an AIOS audit, wants to score their setup, or asks "is my AIOS working." It explicitly is not a capability planner (that's a different skill)  -  it only checks whether the files, folders, registries, and connections that make an AI operating system are actually in place.
 
@@ -196,9 +153,12 @@ It scores four dimensions ("the Four Cs") out of 25 points each, for 100 total: 
 
 Distinctively, it computes leverage-weighted priorities rather than a flat checklist: each lost point gets multiplied by an impact factor (e.g. zero reachable data domains is a 4x multiplier since the system is "blind to the business," a missing operating manual is 3x, having zero skills is 2x) so the top-3 gaps it surfaces are the ones actually worth fixing first, each paired with a one-line next action. The whole thing is designed to run read-only and fast (under 60 seconds), print a formatted scoreboard plus a stage label (Foundation through Autonomous), and optionally save the report to track score over time on repeat runs  -  the compounding hook of the skill is that re-running it weekly shows the score climbing.
 
-### `build`
+➡️ [Read the full skill](skills/audit/SKILL.md)
 
-*Routes any non-trivial build through triage, Superpowers planning, risk-based execution (TDD vs GSD), and mandatory adversarial review.*
+</details>
+
+<details id="skill-build">
+<summary><b><code>build</code></b> · Routes any non-trivial build through triage, Superpowers planning, risk-based execution (TDD vs GSD), and mandatory adversarial review.</summary>
 
 The `build` skill is a router, not a builder: it fires when the user asks to build, implement, or ship a non-trivial feature and decides the right sequence of primitives rather than writing code itself. It operationalizes a house doctrine of "plan with Superpowers, execute by whichever risk dominates, always close with adversarial review," keeping the main session clean by delegating execution and review to other tools.
 
@@ -208,9 +168,12 @@ Stage 3 is the mandatory adversarial review: the diff always goes to a separate-
 
 What is distinctive here is the routing discipline itself: it names four gates to walk before any code gets written, gives a concrete risk-to-route table instead of leaving execution strategy to a judgment call, and treats the adversarial review pass as structurally non-optional rather than a nice-to-have, because the source benchmark showed self-graded pipelines missing real bugs that only a second, independent reviewer caught.
 
-### `capability-radar`
+➡️ [Read the full skill](skills/build/SKILL.md)
 
-*Detects when your own work has produced enough signal to justify building a new skill, agent, routine, or tool  -  then routes the decision through a risk-tiered, Codex-reviewed build gate.*
+</details>
+
+<details id="skill-capability-radar">
+<summary><b><code>capability-radar</code></b> · Detects when your own work has produced enough signal to justify building a new skill, agent, routine, or tool  -  then routes the decision through a risk-tiered, Codex-reviewed build gate.</summary>
 
 Capability Radar is the inward-facing detector that closes the loop on a personal AI workstation's self-evolution. It watches the owner's own work (and the model's own review/output patterns) for signs that a repeated manual task, a recurring judgment call, or a hand-built one-off should graduate into a reusable capability. It is deliberately the mirror image of an outward-facing "opportunity engine" that scouts the market for products to build for others  -  this one scouts the operator's own workflow for capabilities to build for the assistant itself.
 
@@ -218,9 +181,12 @@ The skill splits cleanly into a deterministic half and a judgment half. A compan
 
 What is distinctive here is the two-gate adversarial review baked into the auto-build path: before building anything, a separate model/CLI (Codex in the original) is asked to independently judge whether the candidate is worth building and whether the proposed type/tier is correct (BUILD/SUGGEST/SKIP verdict), and after any builder produces the artifact, the same separate reviewer checks the output before it is registered. This "never let the same model that had the idea also bless the idea" discipline is the throughline. Auto-building is further gated to only the lowest-risk tier and only at high confidence, with everything else (scheduled/unattended capabilities, anything higher-risk) demoted to "built but not armed" so a human explicitly turns it on. The skill also insists on explicit "no silent skips" behavior when deferring lower-confidence candidates, and files a provenance record for every build so the decision trail (what/why/spec/reviewer verdicts/evidence) survives.
 
-### `fable-mode`
+➡️ [Read the full skill](skills/capability-radar/SKILL.md)
 
-*Borrow a frontier model's discipline, not its weights: five gates any model can run.*
+</details>
+
+<details id="skill-fable-mode">
+<summary><b><code>fable-mode</code></b> · Borrow a frontier model's discipline, not its weights: five gates any model can run.</summary>
 
 Fable-mode is a behavioral overlay, not a task skill: it doesn't do a job, it changes how the model approaches whatever job comes next. It was reverse-engineered from watching Anthropic's "Fable 5" model work (via a YouTube analysis + Anthropic's own published system-prompt language) and packaged as a single SKILL.md that any instruction-following model (Opus, Sonnet, Haiku, GPT-lineage, local models) can approximate. The core insight it encodes: a chunk of the gap between a frontier model and a cheaper one isn't raw intelligence, it's discipline  -  skipped verification, premature confidence, trusting stale training memory, under-scoped plans. This skill tries to buy back that discipline gap explicitly.
 
@@ -230,23 +196,23 @@ Beyond the five gates it ships a short list of "smells" that signal a gate got s
 
 What's distinctive is the provenance and honesty of the framing: it's explicit that this is not a magic capability upgrade, only a process transfer, and it cites its own sources (a Nate Herk video, Anthropic's publicly posted system-prompt language) rather than claiming to have extracted anything through improper means. It's a compact, well-reasoned meta-skill about disciplined AI-assisted work that reads well as a portfolio piece.
 
-### `framework-builder`
+➡️ [Read the full skill](skills/fable-mode/SKILL.md)
 
-*Turns repeated thinking into a named, executable decision framework: rubric in, action out.*
+</details>
+
+<details id="skill-framework-builder">
+<summary><b><code>framework-builder</code></b> · Turns repeated thinking into a named, executable decision framework: rubric in, action out.</summary>
 
 `/framework-builder` converts a topic or a captured brain-dump into a reusable DECISION framework: a named rule, rubric, scorecard, or gate that always terminates in an action (pick / build / skip / score). It is explicitly not for software frameworks, prose SOPs, or wiki pages without a decision rule; the gate at the top rejects those.
 
 The flow classifies the framework type, drafts the decision rule with concrete thresholds, then runs a mandatory quality gate: the framework must include an explicit pass/fail check and worked examples before it graduates. Decision frameworks then get wired into the assistant's operating docs on a propose-then-confirm basis, so the system's judgment compounds instead of living in one chat transcript.
 
-### `grill-me`
+➡️ [Read the full skill](skills/framework-builder/SKILL.md)
 
-*Test*
+</details>
 
-Test
-
-### `hooks-builder`
-
-*Designs, builds, and audits Claude Code hooks  -  the event-driven shell layer that fires deterministically on session/tool events.*
+<details id="skill-hooks-builder">
+<summary><b><code>hooks-builder</code></b> · Designs, builds, and audits Claude Code hooks  -  the event-driven shell layer that fires deterministically on session/tool events.</summary>
 
 hooks-builder is a meta-skill for working with Claude Code's hooks layer: shell commands wired into `settings.json` that the harness fires deterministically on events like `SessionStart`, `PreToolUse`, `PostToolUse`, `Stop`, and `SessionEnd`. It triggers when the user wants something to happen mechanically every single time an event matches ("every time I edit, run X", "block tool Y when Z", "audit my hooks")  -  cases where a prompt or memory instruction can't guarantee reliability, only the hook layer can. It positions itself as one lane in a family of "mechanism builders" (skill-builder, agent-builder, routines-builder, plugin-builder) and explicitly hands off clock-driven or non-deterministic asks to those siblings via a mandatory decision gate at the very start.
 
@@ -255,9 +221,12 @@ The skill runs in three modes. Build mode walks a discovery interview (trigger e
 What's distinctive is the safety discipline baked around a genuinely dangerous primitive: hooks run arbitrary shell as the owner's own user on every match, so the skill never treats "hook created" as "hook done"  -  it stays unarmed until it survives dry-fire, live-fire, and a forced failure test, and it insists secrets are sourced from a local `.env` inside the script rather than ever appearing on a command line. A companion `reference.md` carries the full event catalog (stable core vs extended/experimental events), the settings.json schema for all three layers, the stdin/exit-code hook protocol (including a fail-closed trap pattern for guard scripts), and a live inventory of what hooks are actually installed. The one worked example (a Telegram ping on `SessionEnd`) uses generic environment-variable names sourced from a gitignored `.env`, not any real token or chat ID, so it reads as a clean, reusable template rather than a credential leak.</parameter>
 </invoke>
 
-### `level-up`
+➡️ [Read the full skill](skills/hooks-builder/SKILL.md)
 
-*Weekly interview that finds one automation opportunity and ships it as a real artifact, using the Mindset-Method-Machine pipeline.*
+</details>
+
+<details id="skill-level-up">
+<summary><b><code>level-up</code></b> · Weekly interview that finds one automation opportunity and ships it as a real artifact, using the Mindset-Method-Machine pipeline.</summary>
 
 level-up runs a structured weekly ritual (or on-demand) that walks the user through the "3Ms" framework  -  Mindset, Method, Machine  -  to surface exactly one automation opportunity per run and carry it all the way to a shipped artifact. It fires on phrases like "let's level up", "what should I automate next", "find me leverage this week", or as a standing Friday habit. The stated philosophy is that repeating this interview enough times (4-6 runs) rewires how the user thinks day-to-day, so they start spotting automation opportunities on their own without needing the skill.
 
@@ -265,9 +234,12 @@ The skill executes in three phases. Phase 1 (Mindset) interviews the user with a
 
 What's distinctive is the discipline baked into the interview: it enforces "eliminate first" (don't automate work that should just stop), defaults to the lowest autonomy level unless the user explicitly pushes for more, and hard-stops if there's no measurable KPI target  -  treating "does this move a number" as a gate rather than an afterthought. It closes every run with a single dated decision-log entry and one scaffolded artifact, explicitly refusing to become a multi-candidate planner. The skill is adapted from Nate Herk's "Three Ms of AI" framework and carries that attribution/trademark notice in its own text, which is why it's already self-contained and requires no further sanitization.
 
-### `loops-builder`
+➡️ [Read the full skill](skills/level-up/SKILL.md)
 
-*Designs, audits, and optimizes agent loops (the depth primitive) with mandatory hard caps and objective done-checks, routing to the right mechanism (/goal, /loop, bash Ralph loop, dynamic workflow, or Cloud Routine).*
+</details>
+
+<details id="skill-loops-builder">
+<summary><b><code>loops-builder</code></b> · Designs, audits, and optimizes agent loops (the depth primitive) with mandatory hard caps and objective done-checks, routing to the right mechanism (/goal, /loop, bash Ralph loop, dynamic workflow, or Cloud Routine).</summary>
 
 loops-builder is a Claude Code meta-skill that designs, builds, optimizes, or audits "agent loops"  -  the depth primitive that runs reason-act-observe repeatedly until a verifiable done-check passes, always bounded by a mandatory numeric hard cap. It fires on `/loops-builder` whenever something should iterate until a criterion is met (tests green, a quality gate passed) rather than run once, and it is explicitly a sibling to width/cadence/crew builders (workflow-builder for parallel fan-out, routines-builder for scheduled cadence, agents-team-builder for peer crews)  -  this one owns the iterate-to-a-bar case specifically.
 
@@ -275,9 +247,12 @@ The skill's central discipline is "two brakes, always": every loop it emits must
 
 What is distinctive is the emphasis on real measured failure modes rather than theory: it documents a concrete cost blowup (a 4-finder x 4-round audit workflow that spawned roughly 187 agents and 6.6 million tokens without converging) to justify capping rounds and batching verification, it encodes a hard Claude Code harness limit (a Stop-hook that blocks more than 8 consecutive times force-ends the turn) directly into its Stop-hook template, and it treats "never fire the loop" as an absolute rule  -  the skill only builds and writes the artifact, a human or another skill must invoke it. It closes every run by logging to a wiki log file and, for reusable loops, registering them in the project's capability registry, and it ships an Optimize mode (diagnose a misbehaving loop by symptom, e.g. runs forever means missing hard cap, confidently-wrong done-signal means the verifier isn't independent) and an Audit mode with a 15-point checklist for retrofitting the discipline onto existing loops.
 
-### `multi-brain`
+➡️ [Read the full skill](skills/loops-builder/SKILL.md)
 
-*Auto-routes sub-tasks (code review, vision/OCR, whole-repo scans, long-horizon coding) to the right specialist LLM while Claude stays the orchestrator in front of the user.*
+</details>
+
+<details id="skill-multi-brain">
+<summary><b><code>multi-brain</code></b> · Auto-routes sub-tasks (code review, vision/OCR, whole-repo scans, long-horizon coding) to the right specialist LLM while Claude stays the orchestrator in front of the user.</summary>
 
 Multi-brain is a routing skill, not a task skill: it sits over every turn and decides, cheaply and rarely, when a sub-task should go to a different model instead of being handled by Claude directly. The roster it draws from is Codex (OpenAI/GPT, for adversarial review and rescue), Gemini-lineage tools (a local Ollama vision model by default, with an opt-in agy Antigravity CLI escalation for harder multimodal reads), and GLM (an opt-in, paid, long-horizon open-weights coding specialist reached via OpenRouter). Claude always drives and integrates the result; the other brains are treated as callable tools, never as a replacement front end.
 
@@ -288,9 +263,12 @@ What is distinctive is the discipline layered on top of the routing table: an an
 The pattern generalizes cleanly beyond this specific roster: any setup with more than one available model or CLI can reuse the shape (a small trigger table, a no-self-review law, path-based risk detection, an announce-before-forced-or-paid-route rule, and a deterministic failure counter) and swap in whatever specialists it has on hand.</description>
 </invoke>
 
-### `onboard`
+➡️ [Read the full skill](skills/multi-brain/SKILL.md)
 
-*Day-1 onboarding wizard for a freshly cloned personal-AIOS starter kit  -  7-question intake plus one-shot file scaffold.*
+</details>
+
+<details id="skill-onboard">
+<summary><b><code>onboard</code></b> · Day-1 onboarding wizard for a freshly cloned personal-AIOS starter kit  -  7-question intake plus one-shot file scaffold.</summary>
 
 `/onboard` is the guided Day-1 setup flow for the `aios-starter-kit` template (a separate public repo, not Servy itself). It fires only inside a freshly cloned kit that still has an `aios-intake.md` file and a `CLAUDE.md` full of `{{...}}` placeholders  -  it explicitly refuses to run inside an already-onboarded AIOS like Servy. It combines what would otherwise be two skills (an intake interview and a scaffolder) into a single idempotent wizard: read or create `aios-intake.md`, run a 7-question interview if it's not filled in, then generate the Day-1 file set inline at the end of the same run.
 
@@ -300,9 +278,12 @@ Once the intake is complete, Step 3 scaffolds six files in one batch with no mul
 
 Six numbered implementation rules keep the skill from scope-creeping in conversation: never add an eighth question, never skip the voice-paste rule, always scaffold in one shot at the end (not incrementally), never write additional skills beyond the kit's baseline three, treat `references/3ms-framework.md` as read-only since it ships pre-written in the kit, and never touch `.env` or ask for API keys on Day 1 (that's Day 2's job). A verification section gives the implementer three concrete tests: a cold clone-and-run test expecting citation of specific answers (not generic output), an idempotency test on a single changed priority, and a voice-rejection test.
 
-### `plugin-builder`
+➡️ [Read the full skill](skills/onboard/SKILL.md)
 
-*Packages Claude Code skills, agents, hooks, and MCP servers into distributable, installable plugins and marketplaces.*
+</details>
+
+<details id="skill-plugin-builder">
+<summary><b><code>plugin-builder</code></b> · Packages Claude Code skills, agents, hooks, and MCP servers into distributable, installable plugins and marketplaces.</summary>
 
 Plugin-builder is the packaging and distribution layer that sits above the other primitive builders (skill-builder, agent-builder, agents-team-builder, routines-builder). Where those tools create one loose capability that lives inside .claude/, this skill bundles any mix of existing skills, agents, commands, hooks, and MCP servers into a single versioned, installable unit, a Claude Code plugin, and optionally stands up a marketplace manifest so the bundle can be installed with claude plugin install name@marketplace. It fires on requests like build a plugin, package this as a plugin, bundle my skills into a plugin, make a marketplace, or ship my capabilities.
 
@@ -310,15 +291,25 @@ It opens with a decision gate before any interview: is there a real distribution
 
 Once confirmed, it scaffolds the plugin directory with the manifest (plugin.json) inside .claude-plugin/ and every actual component (commands, agents, skills, hooks, MCP config) at the plugin's root, the single most common structural mistake it explicitly guards against. It wires all internal paths through the CLAUDE_PLUGIN_ROOT variable instead of hardcoded absolute paths, writes or appends to a marketplace.json, and ends with a validation step that actually runs claude plugin validate, a local marketplace add, and a real local install and uninstall cycle rather than just claiming success. Beyond building, it has a dedicated optimize mode for an existing plugin (fixing misplaced components, hardcoded paths, MCP-that-should-be-CLI, bloated manifests, stale versions) and an audit mode with a full manifest, structure, marketplace, and boundary checklist. All schema facts (plugin.json fields, hooks.json shape, marketplace source types, the CLI surface) are verified against real installed plugins and the claude plugin --help output rather than guessed, with unverifiable claims explicitly flagged.
 
-### `routines-builder`
+➡️ [Read the full skill](skills/plugin-builder/SKILL.md)
 
-*Test tagline*
+</details>
 
-Test description
+<details id="skill-routines-builder">
+<summary><b><code>routines-builder</code></b> · Decision-gated builder for recurring automation: picks the right cadence mechanism, then scaffolds it safely.</summary>
 
-### `skill-builder`
+`routines-builder` handles "make this recurring": scheduled jobs, hooks, loops, daily rituals. Its core value is the decision gate that runs BEFORE anything is built: recurring cloud work as the user (a scheduled Routine), an event-triggered local reaction (a hook), a run-until-done iteration (a loop), or an interactive ritual (a daily-* skill) are different mechanisms with different failure modes, and the gate picks one deliberately instead of defaulting to whatever was built last time.
 
-*Guides building, auditing, and optimizing Claude Code skills via a discovery interview and an official-best-practices checklist.*
+After the gate comes a Discovery Interview (what triggers it, what it reads, what it may touch, what it must never do), then the scaffold itself, with safety rails baked in: explicit brakes on anything that loops (an iteration cap plus a success condition, never just one), least-privilege scopes, and a visible audit trail.
+
+It also audits: point it at an existing routine or hook and it checks the cadence still makes sense, the brakes are intact, and the job actually runs (scheduled jobs that silently died are a classic failure it hunts for).
+
+➡️ [Read the full skill](skills/routines-builder/SKILL.md)
+
+</details>
+
+<details id="skill-skill-builder">
+<summary><b><code>skill-builder</code></b> · Guides building, auditing, and optimizing Claude Code skills via a discovery interview and an official-best-practices checklist.</summary>
 
 skill-builder turns Claude Code skill authoring into a repeatable, interview-driven process instead of ad hoc file writing. It fires when the user says things like "build a skill", "create a skill for X", "turn what we just did into a skill", or "optimize/audit this skill", and it operates in two modes: building a new skill from scratch, or auditing/optimizing one that already exists.
 
@@ -329,15 +320,25 @@ The Audit mode is a checklist-driven pass over an existing skill: frontmatter co
 What is distinctive here is the evaluation-first build discipline (baseline Claude without the skill first, write only the instructions that fix observed failures) and the emphasis on testing skills in a genuinely fresh session rather than the authoring session, since leftover context can mask gaps that the written instructions alone need to cover. The companion reference.md is a complete technical reference for every Claude Code skill frontmatter field, invocation control matrix, string substitution syntax, subagent context-fork patterns, hooks, and troubleshooting steps, sourced from the official Claude Code documentation.</description>
 </invoke>
 
-### `skill-harvest`
+➡️ [Read the full skill](skills/skill-builder/SKILL.md)
 
-*test*
+</details>
 
-test
+<details id="skill-skill-harvest">
+<summary><b><code>skill-harvest</code></b> · Mines your real session history for repeated manual work that should have been a skill by now.</summary>
 
-### `workaround-builder`
+`skill-harvest` is the data-driven sibling of an interview-based capability scout: instead of asking what you keep doing by hand, it reads your actual Claude Code session transcripts and finds out. A helper script walks recent history; the skill clusters repeated patterns: the same kind of request phrased five different ways, the same multi-step dance performed manually across sessions.
 
-*A structured creative-research engine that finds a legitimate alternate route whenever a build hits an external wall (gated API, broken tool, ToS ban, quota limit) instead of giving up or grabbing the first hack.*
+Each cluster becomes an evidence-backed proposal: what the repeated task is, how often it appeared, roughly how much time it burns, and what the skill that replaces it would look like. Proposals are ranked so the top of the list is the highest-leverage thing to automate next.
+
+The distinctive move is grounding in usage data rather than self-report: people are bad at noticing their own repetition, and transcript mining catches the automation candidates that interviews miss. Run it monthly and the skill library grows in exactly the places your real work demands.
+
+➡️ [Read the full skill](skills/skill-harvest/SKILL.md)
+
+</details>
+
+<details id="skill-workaround-builder">
+<summary><b><code>workaround-builder</code></b> · A structured creative-research engine that finds a legitimate alternate route whenever a build hits an external wall (gated API, broken tool, ToS ban, quota limit) instead of giving up or grabbing the first hack.</summary>
 
 workaround-builder fires when a task is blocked by something outside the codebase itself: an API that's paywalled or gated, a tool that's broken or missing a runtime dependency, a service that bans automation, a rate limit or quota that's been hit, a platform that simply lacks the needed feature, or access that's been denied. It is explicitly not for bugs in your own code (that routes to a systematic-debugging skill) and not for designing new features (that routes to a brainstorming skill)  -  it only activates when the obstacle is external to the project.
 
@@ -345,9 +346,12 @@ The skill runs an eight-step pipeline. It starts with an ethics gate that must b
 
 The generative core is a prior-art sweep (check internal knowledge and the web, including how other people solved the identical wall) followed by forcing at least three candidate solutions from different "doors"  -  different entry point, different tool, different abstraction layer, human-in-the-loop bridge, reducing the ask, precomputing/mirroring, or emulating a substitute. Each candidate is scored on effort, durability, blast radius, and ethics-gate cleanliness, one recommendation is chosen (preferring the boring official path if it's comparably cheap), the smallest possible spike is run to prove it actually works, and successful workarounds get registered in a running log with a "rot profile" (what would break the route and when to re-check if the official path has opened). What's distinctive is the discipline of treating a workaround as a documented, dated, risk-rated route rather than an ad hoc hack, and the built-in habit of checking prior art before reinventing a fix that was already found before.
 
-### `workflow-builder`
+➡️ [Read the full skill](skills/workaround-builder/SKILL.md)
 
-*Interactive builder that turns a width-shaped task into a saved, bounded, parallel-fan-out workflow file for Claude Code.*
+</details>
+
+<details id="skill-workflow-builder">
+<summary><b><code>workflow-builder</code></b> · Interactive builder that turns a width-shaped task into a saved, bounded, parallel-fan-out workflow file for Claude Code.</summary>
 
 workflow-builder is a meta-skill for designing, building, optimizing, or auditing "saved dynamic workflows"  -  JS orchestration files in `.claude/workflows/` that fan work out to N parallel sub-agents and merge the results deterministically. It fires on requests like "build a workflow," "save this as a workflow," "turn this fan-out into a saved workflow," or `/workflow-builder`, and sits in a family of sibling builders (skill-builder, agent-builder, routines-builder, agents-team-builder, plugin-builder) as the specialist for width-shaped orchestration specifically, as opposed to depth (`/goal`), a few cooperating roles (agent teams), or simple recurring recipes (skills).
 
@@ -355,33 +359,79 @@ The skill runs a strict multi-phase pipeline. Phase 1 is a mandatory decision ga
 
 What's distinctive is the discipline baked into it: it treats "build" as cheap and "fire" as expensive and enforces that separation structurally (the skill will draft and validate a workflow file but will never execute it on the user's behalf), it has a real anecdote-driven cost doctrine (one unbounded workflow run burned half a $200/month subscription) that shapes several of its gates, and it ships a companion `reference.md` documenting the actual harness JS API (primitives like `agent()`, `pipeline()`, `parallel()`, `budget`, hard rules like banning `Date.now()`/`Math.random()` since they break resumability, and house patterns for adversarial verification, loop-until-dry discovery, and judge panels). It also includes an Optimize mode (diagnosing misbehaving existing workflows via common symptom-to-fix mappings) and an Audit mode (a concrete checklist for any file already in `.claude/workflows/`).
 
-### `cowatch`
+➡️ [Read the full skill](skills/workflow-builder/SKILL.md)
 
-*Co-watch a public live stream with your assistant: rolling local transcript, near-real-time reactions.*
+</details>
+
+
+## Research & Knowledge
+
+<img src="docs/img/research-knowledge.png" width="640" alt="Research & Knowledge">
+
+Everything that feeds the knowledge wiki: deep research, ingestion, recall.
+
+| Skill | One-liner |
+|---|---|
+| [`cowatch`](#user-content-skill-cowatch) | Co-watch a public live stream with your assistant: rolling local transcript, near-real-time reactions. |
+| [`grill-me`](#user-content-skill-grill-me) | A proactive interviewer that pulls half-formed plans out of your head and files them as structured knowledge. |
+| [`nate-watch`](#user-content-skill-nate-watch) | Watches a favorite creator's public video database and turns each new upload into a wiki page plus a build decision. |
+| [`radar-harvest`](#user-content-skill-radar-harvest) | Mines the full daily tech-news fetch into the wiki and turns release signals into adoption decisions. |
+| [`rag-forge`](#user-content-skill-rag-forge) | Scaffolds a real, local-first contextual-retrieval RAG pipeline  -  chunk, hybrid-embed, fuse, cite  -  in four tested scripts. |
+| [`rnd-loop`](#user-content-skill-rnd-loop) | Chains deep research and a throwaway prototype spike into one evidence-backed GO/NO-GO/PIVOT decision. |
+| [`spark`](#user-content-skill-spark) | Turns any idea or technique into a throwaway prototype, measures it against a baseline, and hands back a decision-grade GO/NO-GO/PIVOT verdict. |
+| [`storm-research`](#user-content-skill-storm-research) | Five adversarial expert lenses, a contradiction map, and citation-verified synthesis: research you can trust. |
+| [`study`](#user-content-skill-study) | Turns any note in your knowledge base into an active-recall quiz that makes you actually learn it. |
+
+<details id="skill-cowatch">
+<summary><b><code>cowatch</code></b> · Co-watch a public live stream with your assistant: rolling local transcript, near-real-time reactions.</summary>
 
 `/cowatch <stream-url>` lets the assistant attend a public live event with you: a keynote, a launch, a conference stream. Under the hood a capture script pulls the stream with yt-dlp, segments audio with ffmpeg, and transcribes it locally with whisper into a rolling transcript file the assistant re-reads as the event unfolds, so you can ask "what did they just announce about pricing?" mid-stream and get an answer grounded in the last few minutes.
 
 It has two modes (live co-watch and on-demand catch-up), a model flag for transcription quality, and an optional ingest step that files the event's takeaways into the knowledge wiki afterwards. Everything runs locally: no audio leaves the machine. By design it only handles public web streams; meeting audio (Teams/Zoom/system) is out of scope.
 
-### `nate-watch`
+➡️ [Read the full skill](skills/cowatch/SKILL.md)
 
-*Watches a favorite creator's video feed and files new uploads into your knowledge wiki, human-gated.*
+</details>
 
-Test description paragraph one.
+<details id="skill-grill-me">
+<summary><b><code>grill-me</code></b> · A proactive interviewer that pulls half-formed plans out of your head and files them as structured knowledge.</summary>
 
-Test description paragraph two.
+`grill-me` fires when you are working something OUT of your head rather than asking a question: mulling a plan, describing how you do something, floating a half-formed idea. You will rarely invoke it by name; it is designed to trigger on natural signals like "I've been thinking about..." and offer to capture the thinking before it evaporates.
 
-### `radar-harvest`
+It runs a structured interview, one question at a time: scope, constraints, examples, edge cases, what already exists, what done looks like. The point is externalization: by the end, the idea that lived in your head is a complete written capture, filed into the knowledge base with a clear name.
 
-*Mines the full daily tech-news fetch into the wiki and turns release signals into adoption decisions.*
+The capture then feeds the build chain. Every grill ends by asking what the knowledge should become: a decision framework, a skill, a spec, or just a wiki page. Its downstream siblings (framework-builder, skill-builder) consume grill captures as their raw material, which makes this the front door for turning thinking into tooling.
+
+➡️ [Read the full skill](skills/grill-me/SKILL.md)
+
+</details>
+
+<details id="skill-nate-watch">
+<summary><b><code>nate-watch</code></b> · Watches a favorite creator's public video database and turns each new upload into a wiki page plus a build decision.</summary>
+
+`nate-watch` monitors one creator's public content database (a published spreadsheet of videos and resources) for new uploads. On each new row it does the full ingestion loop: watch the video, read the linked resources where reachable, write a knowledge-wiki page with the distilled method, register the source, and log the ingestion.
+
+What makes it more than a bookmarking tool is the mandatory closing gate: every ingested video ends with "can we build a skill, agent, or routine from this?"  -  so a video about a lead-gen workflow becomes either a concrete build proposal or an explicit "nothing to build, here's why." Knowledge lands as capability, not as a watch-later list.
+
+It runs two ways: interactively ("any new videos?") or as a scheduled cloud routine that sweeps twice daily and pushes its ingestions to review branches. The pattern generalizes to any creator whose content you systematically learn from: point it at a feed, and every upload gets the same treatment.
+
+➡️ [Read the full skill](skills/nate-watch/SKILL.md)
+
+</details>
+
+<details id="skill-radar-harvest">
+<summary><b><code>radar-harvest</code></b> · Mines the full daily tech-news fetch into the wiki and turns release signals into adoption decisions.</summary>
 
 The sibling of a daily tech-radar digest: where the digest keeps the top three items and discards the rest, `/radar-harvest` mines the FULL day's fetch into the knowledge wiki so the other 99% compounds instead of evaporating. It writes or updates wiki pages per meaningful item and keeps an eye out for adoptable capabilities: a new model topping coding benchmarks, a CLI worth wiring in, a tool that replaces a manual step.
 
 Each adoption candidate is turned into a concrete decision (adopt / watch / skip) rather than a bookmark. It runs on public data only and has an explicit boundary against employer or client material, which makes it a clean pattern for anyone maintaining a personal research wiki fed by daily news scans.
 
-### `rag-forge`
+➡️ [Read the full skill](skills/radar-harvest/SKILL.md)
 
-*Scaffolds a real, local-first contextual-retrieval RAG pipeline  -  chunk, hybrid-embed, fuse, cite  -  in four tested scripts.*
+</details>
+
+<details id="skill-rag-forge">
+<summary><b><code>rag-forge</code></b> · Scaffolds a real, local-first contextual-retrieval RAG pipeline  -  chunk, hybrid-embed, fuse, cite  -  in four tested scripts.</summary>
 
 rag-forge builds a working retrieval-with-citations pipeline over any folder of markdown or text files, rather than a hand-wavy wrapper around an embedding call. It fires when someone wants to "build a RAG," search notes with citations, index a corpus, or do hybrid BM25+embeddings search, and it explicitly distinguishes itself from a knowledge-graph builder and a codebase indexer that solve adjacent but different problems.
 
@@ -391,9 +441,12 @@ What is distinctive is the discipline baked around the mechanics: a deliberate l
 
 The one data-boundary mention in the file is a generic reusable pattern (refuse and redirect employer-confidential corpora to an employer-managed tool) rather than any internal fact, and the bundled sample corpus is innocuous public-domain-style penguin biology text used purely to prove the BM25-vs-embeddings contrast.
 
-### `rnd-loop`
+➡️ [Read the full skill](skills/rag-forge/SKILL.md)
 
-*Chains deep research and a throwaway prototype spike into one evidence-backed GO/NO-GO/PIVOT decision.*
+</details>
+
+<details id="skill-rnd-loop">
+<summary><b><code>rnd-loop</code></b> · Chains deep research and a throwaway prototype spike into one evidence-backed GO/NO-GO/PIVOT decision.</summary>
 
 `/rnd-loop` is a thin conductor skill that runs the full arc of an R&D engineer's job on one topic: Scan, frame a hypothesis, spike, evaluate, decide, and capture. It exists because research and prototyping are usually run as two disconnected errands; this skill sequences them into a single session that ends in a defensible decision rather than either "here's what I learned" or "here's a demo" in isolation.
 
@@ -401,9 +454,12 @@ It fires on prompts like "run the r&d loop on X," "research and prototype X," "t
 
 What's distinctive is the explicit non-negotiable human gate between research and spike ("a real R&D engineer chooses what to test"), the discipline of one loop / one hypothesis / one decision rather than braiding multiple bets into a muddy verdict, and treating the two halves as genuinely separable engines (pure research vs. pure prototyping) that this skill exists purely to sequence and link. It is a good template for anyone who wants to formalize "investigate, then actually test, then decide" as a repeatable workflow rather than an ad hoc habit.
 
-### `spark`
+➡️ [Read the full skill](skills/rnd-loop/SKILL.md)
 
-*Turns any idea or technique into a throwaway prototype, measures it against a baseline, and hands back a decision-grade GO/NO-GO/PIVOT verdict.*
+</details>
+
+<details id="skill-spark">
+<summary><b><code>spark</code></b> · Turns any idea or technique into a throwaway prototype, measures it against a baseline, and hands back a decision-grade GO/NO-GO/PIVOT verdict.</summary>
 
 Spark is the "development" half of a two-part R&D loop (its sibling being a research skill that answers "what's true about X"). Where research produces knowledge, Spark produces evidence: it takes an idea, a technique, or a claim someone wants to validate and turns it into the smallest possible disposable prototype ("spike"), instruments that spike to produce one deciding metric against a named baseline, and then converges the resulting evidence into an honest, confidence-scored verdict. The explicit framing is that the deliverable is the *decision*, not the code  -  the prototype is meant to be thrown away once it has answered the question.
 
@@ -411,21 +467,55 @@ It fires on prompts like "spike this", "prototype X to test it", "is X feasible"
 
 What is distinctive here is the discipline layered on top of the AI orchestration: a strict data-boundary gate that refuses to run if the underlying idea touches confidential employer work; a rule that the final verdict must be adversarially reviewed by a different AI lineage rather than self-graded; a deterministic Python renderer that turns the verdict JSON into an HTML report and hard-fails if any template placeholder or dead link survives, so a partial render can never ship; and a mandatory visual-quality gate (screenshot plus vision-model review) before the HTML artifact is considered done. The renderer also persists results to a running "dossier" file so a companion dashboard can auto-populate historical spike outcomes over time. The whole thing is built to enforce the difference between "it ran" and "it worked"  -  every phase pushes toward a real measured number and an honestly-scored confidence rather than a vibes-based thumbs up.
 
-### `storm-research`
+➡️ [Read the full skill](skills/spark/SKILL.md)
 
-*Five adversarial expert lenses, a contradiction map, and cross-lineage citation verification turn one topic into a trustworthy, shareable HTML briefing.*
+</details>
 
-Test description placeholder.
+<details id="skill-storm-research">
+<summary><b><code>storm-research</code></b> · Five adversarial expert lenses, a contradiction map, and citation-verified synthesis: research you can trust.</summary>
 
-### `study`
+`storm-research` is for when a one-prompt brain-dump is not good enough: decisions that deserve a verified, multi-perspective briefing. It spins up five expert lenses in parallel (practitioner, academic, skeptic, economist, and a domain-matched fifth), each researching the same question independently with its own bias.
 
-*Turn any note you have saved into a quiz that makes you actually remember it.*
+The centerpiece is the contradiction map: wherever the lenses disagree, the disagreement is surfaced explicitly and either resolved with evidence or flagged as genuinely unsettled. That is the opposite of the usual synthesis failure where conflicting sources get silently averaged into confident-sounding mush.
 
-Placeholder
+The final briefing (rendered as a formatted HTML report) goes through a citation-verification pass before it ships: every load-bearing claim gets checked against its cited source, and unverifiable claims are marked as such. Inspired by the STORM methodology, adapted into a skill any Claude Code setup can run.
 
-### `aegis`
+➡️ [Read the full skill](skills/storm-research/SKILL.md)
 
-*Turns any AI system into a scored NIST AI RMF audit-readiness report plus a tested incident-response playbook.*
+</details>
+
+<details id="skill-study">
+<summary><b><code>study</code></b> · Turns any note in your knowledge base into an active-recall quiz that makes you actually learn it.</summary>
+
+`study` converts passive notes into active learning. Point it at any wiki page or saved knowledge source and it builds a quiz: an interactive chat session that asks, waits for your answer, grades it honestly, and explains what you missed. It also generates repeatable active-recall decks (question/answer flashcards) from the same material.
+
+Because the source is your own knowledge base rather than generic content, the questions test exactly what you decided was worth writing down: yesterday's research briefing, a framework you built, the gotchas of a tool you adopted. It also runs language drills (vocabulary and phrasing practice) as a mode.
+
+The design principle is testing over re-reading: recall practice beats passive review, so the skill never summarizes at you; it always asks first, corrects second, and tracks the weak spots you should hit again next session.
+
+➡️ [Read the full skill](skills/study/SKILL.md)
+
+</details>
+
+
+## Quality & Review
+
+<img src="docs/img/quality-review.png" width="640" alt="Quality & Review">
+
+Gates and audits: nothing ships unchecked.
+
+| Skill | One-liner |
+|---|---|
+| [`aegis`](#user-content-skill-aegis) | Turns any AI system into a scored NIST AI RMF audit-readiness report plus a tested incident-response playbook. |
+| [`eval`](#user-content-skill-eval) | Scores a code diff against a weighted JSON rubric using an independent-lineage judge (Codex), so review never marks its own homework. |
+| [`prompt-eval`](#user-content-skill-prompt-eval) | Puts an objective, repeatable score on any prompt or system prompt by running it across a test dataset and grading the outputs. |
+| [`rlsgate`](#user-content-skill-rlsgate) | Pre-deploy security gate that catches RLS holes, exposed secrets, and public buckets in Supabase-backed apps before you ship. |
+| [`roast`](#user-content-skill-roast) | A five-persona adversarial council that pressure-tests an idea and hands back one GO/RESHAPE/KILL verdict before you build. |
+| [`verify-loop`](#user-content-skill-verify-loop) | Turns "looks done" into "proven working" via a build-time verification loop plus a separate adversarial stress-test pass. |
+| [`verify-specifics`](#user-content-skill-verify-specifics) | Extracts every hallucination-prone claim from AI-drafted prose into a checklist of exactly what to verify before shipping. |
+
+<details id="skill-aegis">
+<summary><b><code>aegis</code></b> · Turns any AI system into a scored NIST AI RMF audit-readiness report plus a tested incident-response playbook.</summary>
 
 `/aegis` closes what its own framing calls the "AI governance proof-gap"  -  the gap between AI systems ostensibly being governed and teams actually being able to prove it in an audit. Pointed at a target path (or the current directory by default), it produces two evidence-backed artifacts scored against the NIST AI RMF, with an indicative ISO/IEC 42001 and EU AI Act crosswalk layered on top: an Audit-Readiness Report (scored gap analysis plus a prioritized 90-day fix list) and an Agent Incident-Response Playbook (kill switch, rollback, containment, escalation, and a mandatory runnable tabletop test).
 
@@ -435,9 +525,12 @@ The 26 controls in `rubric.json` span NIST's four functions (GOVERN, MAP, MEASUR
 
 What's distinctive: model auto-invocation is deliberately disabled (it only fires on explicit `/aegis` since a full audit is expensive), the rubric is config-driven so new controls need no code changes, and the crosswalk was itself adversarially reviewed by a different model lineage (Codex) rather than self-certified  -  with an explicit disclaimer baked into every report that the mappings are indicative navigation aids, not legal advice.
 
-### `eval`
+➡️ [Read the full skill](skills/aegis/SKILL.md)
 
-*Scores a code diff against a weighted JSON rubric using an independent-lineage judge (Codex), so review never marks its own homework.*
+</details>
+
+<details id="skill-eval">
+<summary><b><code>eval</code></b> · Scores a code diff against a weighted JSON rubric using an independent-lineage judge (Codex), so review never marks its own homework.</summary>
 
 /eval (Phase 1, score mode) judges a git diff against a structured rubric and returns a per-dimension scorecard plus a weighted total and normalized percentage. It fires on triggers like "eval this diff", "score this code", "rubric-score", or "/eval score", and its stated purpose is to give any code change a repeatable, defensible quality score instead of a vibes-based thumbs up.
 
@@ -446,9 +539,12 @@ Mechanically it is a thin, testable wrapper: the caller gets a diff (a file path
 The distinctive design choice is the split between deterministic and non-deterministic code: everything except the single call-the-judge function (rubric loading, prompt construction, JSON extraction, weighted aggregation) is covered by a stdlib unittest suite (tests/eval/test_eval_judge.py), so the scoring pipeline is fully testable without needing a live model call for most of its logic. The judge is deliberately Codex rather than Claude: when scoring code Claude itself just wrote, this satisfies a No-Self-Review principle (never let the same model lineage grade its own output), which the skill explicitly calls out as satisfying that step of a broader build workflow. Later phases (not yet built) add audit, repair, and discover modes for broader rubric auditing beyond single-diff scoring.</description>
 </invoke>
 
-### `prompt-eval`
+➡️ [Read the full skill](skills/eval/SKILL.md)
 
-*Puts an objective, repeatable score on any prompt or system prompt by running it across a test dataset and grading the outputs.*
+</details>
+
+<details id="skill-prompt-eval">
+<summary><b><code>prompt-eval</code></b> · Puts an objective, repeatable score on any prompt or system prompt by running it across a test dataset and grading the outputs.</summary>
 
 `/prompt-eval` turns "this prompt feels better" into a number. It operationalizes the eval + improvement-loop methodology from Anthropic's "Building with the Claude API" course: define a dataset of test cases, run the prompt-under-test across every case, grade each output, average to one score, then change exactly one prompting technique and re-score to see if it actually helped. It is distinct from a code-review style `/eval` skill that judges a diff against a rubric; this one judges model *output* over a *dataset*, which is the right tool whenever someone is tuning a system prompt, a tool description, a skill's trigger reliability, or any reusable prompt template.
 
@@ -456,9 +552,12 @@ The workflow has six steps: frame the task in one line, get or generate a datase
 
 What is distinctive here is the discipline it enforces on model-grading: the harness always routes the judgment call to a separate model lineage rather than letting the same model that produced a candidate prompt also grade it, avoiding the blind-spot problem where a model rates its own reasoning favorably. It also insists you evaluate on the model you intend to ship on, since a prompt's score is model-specific and testing on a cheaper model than production measures the wrong thing; the harness defaults its target model to a pinned production model (or warns if evaluating on a clearly cheap tier). The engine is a stdlib Python script that calls the Anthropic Messages API for clean runs (bypassing any agent harness overhead), with a small full test suite covering the deterministic core (dataset generation stubs, grader logic, aggregation math, CLI parsing).
 
-### `rlsgate`
+➡️ [Read the full skill](skills/prompt-eval/SKILL.md)
 
-*Pre-deploy security gate that catches RLS holes, exposed secrets, and public buckets in Supabase-backed apps before you ship.*
+</details>
+
+<details id="skill-rlsgate">
+<summary><b><code>rlsgate</code></b> · Pre-deploy security gate that catches RLS holes, exposed secrets, and public buckets in Supabase-backed apps before you ship.</summary>
 
 rlsgate runs a deterministic pre-deploy security scan against Supabase-backed projects (including vibe-coded apps from Lovable, Bolt, Cursor, or similar tools) and walks the user through fixing anything it flags before they deploy. It fires when someone is about to ship a Supabase project or explicitly asks to check for Row Level Security holes, exposed secrets, anon-readable tables, public storage buckets, or unverified webhooks.
 
@@ -466,9 +565,12 @@ The workflow is a tight loop: run `rlsgate scan . --json` (installed via pip, uv
 
 What's distinctive here is the strict division of labor between the deterministic scanner and the model: the skill explicitly forbids the model from claiming a hole exists that the tool didn't report, and forbids implying a clean scan means "secure" rather than "no known high-signal holes present." It also encodes real Supabase domain knowledge in the notes: the anon key is public-by-design and never flagged, only service_role keys are; gitignored secrets are fine, but a `NEXT_PUBLIC_`/`VITE_` prefixed secret is flagged even when gitignored because it still inlines into the browser bundle. This keeps the skill honest about the limits of static analysis while still being genuinely useful as a last-mile check before shipping.
 
-### `roast`
+➡️ [Read the full skill](skills/rlsgate/SKILL.md)
 
-*A five-persona adversarial council that pressure-tests an idea and hands back one GO/RESHAPE/KILL verdict before you build.*
+</details>
+
+<details id="skill-roast">
+<summary><b><code>roast</code></b> · A five-persona adversarial council that pressure-tests an idea and hands back one GO/RESHAPE/KILL verdict before you build.</summary>
 
 `/roast` is an anti-sycophancy front door for idea validation. It fires when the user wants a brutal, honest second opinion on a business idea, product, feature, pricing move, or content bet before committing time to build it  -  triggered by phrases like "roast this idea," "pressure-test this," "is this worth building," or "convene the council." The design premise is explicit: an LLM's default is to agree with the user and make them feel productive, not to protect their time and money, so this skill deliberately manufactures friction instead of validation.
 
@@ -476,9 +578,12 @@ Mechanically, it runs in four steps. First it gathers a tight brief (what the id
 
 What's distinctive is the discipline layered around the core "ask five personas" idea: forcing every agent to score the same axis (viability, not enthusiasm) so scores are comparable, isolating the Judge from averaging math in favor of real synthesis, treating the user's own brief as attackable but not hijackable data, and closing every run with a concrete cheap experiment rather than just an opinion. It sits upstream of any build-triggering workflow  -  the intent is to kill bad bets before they cost build time and sharpen good ones before they ship.
 
-### `verify-loop`
+➡️ [Read the full skill](skills/roast/SKILL.md)
 
-*Turns "looks done" into "proven working" via a build-time verification loop plus a separate adversarial stress-test pass.*
+</details>
+
+<details id="skill-verify-loop">
+<summary><b><code>verify-loop</code></b> · Turns "looks done" into "proven working" via a build-time verification loop plus a separate adversarial stress-test pass.</summary>
 
 verify-loop fires whenever something was just built and appears finished but hasn't actually been proven to work  -  a landing page, a form, an app feature, an automation batch, or a data pipeline. It triggers on phrases like "verify this", "is it actually working", "prove it works", "stress test this", or "/verify-loop", and is explicitly distinct from a native one-shot `/verify`: the native command is for a quick single smoke check, while verify-loop is for when you expect to iterate fixes and run adversarial inputs. It operationalizes Nate Herk's two-part verification methodology and cites the observed heuristic that a one-shot prompt tends to land around 65% correct requiring a rebuild, while a verification loop tends to land around 90% requiring only a review pass.
 
@@ -486,15 +591,38 @@ The skill runs in four steps. First it names the artifact and picks the right ve
 
 What's distinctive is the strict separation between the build-time self-check (verifying by running the thing  -  screenshots, counts, dry-runs) and true adversarial code/security review, which the skill explicitly routes elsewhere (to a different-lineage reviewer) rather than letting the builder grade its own homework. It also bakes in a two-brakes discipline (objective done-check plus a hard iteration cap, default max 3 fix iterations) so the loop can't run forever, and it treats any text/logs/errors surfaced during testing as untrusted data that must never be treated as instructions. It's designed to plug in as the step right after a build pipeline and right before shipping.
 
-### `verify-specifics`
+➡️ [Read the full skill](skills/verify-loop/SKILL.md)
 
-*Turns any AI-drafted prose into a checklist of exactly what to fact-check before you hit publish.*
+</details>
 
-Test description placeholder to isolate schema error.
+<details id="skill-verify-specifics">
+<summary><b><code>verify-specifics</code></b> · Extracts every hallucination-prone claim from AI-drafted prose into a checklist of exactly what to verify before shipping.</summary>
 
-### `bottleneck`
+`verify-specifics` is the pre-ship gate for any prose the AI drafted: briefings, reports, blog posts, emails, wiki pages. It sweeps the draft for every specificity-class claim: named people and organizations, dates, statistics, citations, URLs, version numbers, and quotes: precisely the claim classes language models most confidently get wrong.
 
-*Find the one constraint actually capping your business, and build an action plan around it instead of everything else.*
+The output is a flagged checklist, not a rewritten draft: each extracted claim is listed with where it appears, what kind of claim it is, and what a real verification source would be. High-risk items (a statistic with no source, a quote attributed to a named person) are flagged loudest.
+
+The discipline it encodes: AI-drafted text is publishable only after its specifics have been checked against reality, and the checking goes faster when a machine has already enumerated what needs checking. Running it before anything outward-facing became a standing rule in the system this skill comes from.
+
+➡️ [Read the full skill](skills/verify-specifics/SKILL.md)
+
+</details>
+
+
+## Money & Freelance
+
+<img src="docs/img/money-freelance.png" width="640" alt="Money & Freelance">
+
+The commercial engine: ideas judged, leads worked, bids drafted.
+
+| Skill | One-liner |
+|---|---|
+| [`bottleneck`](#user-content-skill-bottleneck) | Find the one constraint actually capping your business, and build an action plan around it instead of everything else. |
+| [`clay-leads`](#user-content-skill-clay-leads) | Sources and enriches B2B leads through Clay's official agent plugin, then drafts personalized outreach copy into a campaign-ready CSV, never sending anything itself. |
+| [`workana`](#user-content-skill-workana) | Scans Workana's public job board for fit-ranked freelance leads and drafts a tailored, ready-to-paste bid, read-only and human-submitted. |
+
+<details id="skill-bottleneck">
+<summary><b><code>bottleneck</code></b> · Find the one constraint actually capping your business, and build an action plan around it instead of everything else.</summary>
 
 This skill runs a Theory of Constraints (Goldratt) business review over a personal or freelance business's real pipeline: attention, leads, conversion, delivery, retention, cash, and hours. The premise, borrowed from a classic manufacturing example, is that a pipeline's total output equals its narrowest stage, so improving anything except the bottleneck is just motion, not progress. It fires on prompts like "find the bottleneck," "what's the constraint," or "why isn't revenue moving," and refuses outright if the ask is about employer-internal business analysis, keeping itself scoped to personal or freelance work only.
 
@@ -502,9 +630,12 @@ The workflow runs in four steps. First it reads existing ledgers and trackers (a
 
 Fourth, it applies Goldratt's five focusing steps (identify, exploit, subordinate, elevate, warn about the next constraint) to turn the single constraint into a concrete action strategy, explicitly asking at each step whether automation or delegation could replace manual effort. It writes a dated review file with the pipeline table, the named constraint, the strategy, and this week's three concrete moves, then offers to log the decision and defer follow-ups rather than auto-committing anything. What is distinctive here is the discipline: it resists the instinct to produce a top-3 list, insists on evidence over vibes for every number in the table, and is explicit about the difference between this skill (operating business flow analysis) and adjacent tools for idea-validation or system auditing.
 
-### `clay-leads`
+➡️ [Read the full skill](skills/bottleneck/SKILL.md)
 
-*Sources and enriches B2B leads through Clay's official agent plugin, then drafts personalized outreach copy into a campaign-ready CSV, never sending anything itself.*
+</details>
+
+<details id="skill-clay-leads">
+<summary><b><code>clay-leads</code></b> · Sources and enriches B2B leads through Clay's official agent plugin, then drafts personalized outreach copy into a campaign-ready CSV, never sending anything itself.</summary>
 
 clay-leads runs the outbound half of a lead-generation funnel: given a scoped ideal-customer-profile (ICP) and a target count N, it sources and waterfall-enriches B2B leads (verified emails, phone numbers, pain-point signals) using Clay's official Claude Code plugin, then writes personalized subject-line-and-body outreach drafts for each lead in the business's own voice. It fires on requests like "find me leads", "build a lead list", "get me 50 leads for <avatar>", "enrich these companies", or the explicit `/clay-leads` command. It is deliberately not auto-invoked on a hunch, since every run spends real paid credits.
 
@@ -512,9 +643,12 @@ The skill runs an eight-step gated pipeline. Step 1 checks three prerequisites i
 
 What's distinctive here is the layered guardrail design around a tool that costs real money and could spam real people: a hard-coded credit-estimate-and-approval gate before every run, a strict CLI-over-API-over-MCP doctrine that avoids the heavier hosted MCP connector Clay itself recommends skipping, an explicit refusal to ever fabricate enrichment data (blank beats invented), and a structural wall that keeps the actual campaign launch as a manual, human-only action every single time. It composes with sibling funnels for inbound leads and marketplace leads, treating outbound Clay-based prospecting as one clearly-scoped piece of a larger lead-generation system rather than a monolith.
 
-### `workana`
+➡️ [Read the full skill](skills/clay-leads/SKILL.md)
 
-*Scans Workana's public job board for fit-ranked freelance leads and drafts a tailored, ready-to-paste bid, read-only and human-submitted.*
+</details>
+
+<details id="skill-workana">
+<summary><b><code>workana</code></b> · Scans Workana's public job board for fit-ranked freelance leads and drafts a tailored, ready-to-paste bid, read-only and human-submitted.</summary>
 
 This skill is the front door to freelance deal-flow on Workana, a LATAM-first freelance marketplace. It fires on natural triggers like "find freelance work," "scan workana," "any gigs," or the explicit `/workana` command, and also responds when a scheduled digest routine has already surfaced a lead and the owner wants to act on it. Its defining engineering trick is how it reads Workana at all: the platform has no public API, so the scanner requests the public `/jobs` browse URL with an `X-Requested-With: XMLHttpRequest` header, which content-negotiates the response to JSON instead of the HTML shell, exactly mimicking what a logged-out browser does when scrolling the board. It also documents a non-obvious tuning fact: the free-text `query=` parameter returns fresh, newest-first results while the `skills=` taxonomy filter returns stale ones, so the scanner is built to drive off query strings.
 
@@ -522,9 +656,25 @@ The workflow runs in five steps. First it scans and surfaces a ranked digest (ne
 
 What is distinctive here is the hard read-only boundary treated as a non-negotiable law: the scanner never logs in, never bids, and never touches an account, and submission is always a manual, human-approved action. It also builds in courteous scraping discipline (realistic request volume, delays, a hard request cap) so the tool doesn't hammer the target site. The scoring heuristics (few bids beats high score, payment-verified signals a serious client, budget sweet spots) encode real freelance-market judgment that would otherwise live only in an experienced freelancer's head.
 
-### `design-blueprint`
+➡️ [Read the full skill](skills/workana/SKILL.md)
 
-*Turn any URL into a concrete, evidence-backed design system you can build from.*
+</details>
+
+
+## Media & Presentation
+
+<img src="docs/img/media-presentation.png" width="640" alt="Media & Presentation">
+
+Making work visible: design, video, presentations.
+
+| Skill | One-liner |
+|---|---|
+| [`design-blueprint`](#user-content-skill-design-blueprint) | Turn any URL into a concrete, evidence-backed design system you can build from. |
+| [`forge`](#user-content-skill-forge) | A 5-phase kickoff-to-production pipeline that takes a new client or product idea from first onboarding call to deployed, reviewed, registered software. |
+| [`present`](#user-content-skill-present) | Turn any wiki page or topic into a polished, self-contained HTML slide deck in minutes. |
+
+<details id="skill-design-blueprint">
+<summary><b><code>design-blueprint</code></b> · Turn any URL into a concrete, evidence-backed design system you can build from.</summary>
 
 design-blueprint solves the "make it look modern" problem that shows up at the start of every front-end task. Instead of vague prompting, it extracts a concrete brand artifact from a real inspiration site (colors, typography, layout language, motion, copy tone) that other design skills or workflows can consume as a starting point. It is explicitly invoked via `/design-blueprint <url>` (model auto-invocation is disabled) and has two modes.
 
@@ -534,9 +684,12 @@ Mode B (`research <niche> in <place>`) is a competitive/conversion-research mode
 
 What is distinctive is the split between LLM-summarized signal (Mode A's Firecrawl extraction) and ground-truth deterministic signal (the CSS token scraper), reconciled honestly rather than blended, plus firm cost discipline (call caps, credit reporting, one scrape per invocation) and a hard refusal to fabricate missing design data.
 
-### `forge`
+➡️ [Read the full skill](skills/design-blueprint/SKILL.md)
 
-*A 5-phase kickoff-to-production pipeline that takes a new client or product idea from first onboarding call to deployed, reviewed, registered software.*
+</details>
+
+<details id="skill-forge">
+<summary><b><code>forge</code></b> · A 5-phase kickoff-to-production pipeline that takes a new client or product idea from first onboarding call to deployed, reviewed, registered software.</summary>
 
 `/forge` is the end-to-end pipeline for taking a project from "I have an idea or a new client" to "it's live in production." It fires when the user says things like "let's build," "kick off a project," "build something for &lt;client&gt;," or invokes `/forge` directly, and it is meant for brand-new products or freelance client engagements, not incremental work on an existing codebase (that is what a sibling "build" skill is for).
 
@@ -544,9 +697,12 @@ The pipeline runs five linear phases. Phase 0 is a triage and refusal guard: it 
 
 What's distinctive here is the composition-over-invention philosophy: the skill doesn't introduce new machinery beyond a discovery subagent and the two-pass review loop, it just chains together existing skills (brainstorming, planning, execution, code review, verification) into one disciplined arc with hard gates between phases, a single recovery file if context resets mid-pipeline, and an explicit "what this skill does NOT do" section to keep its scope bounded. It also carries an explicit structural refusal for employer-owned customer work, ensuring the pipeline can only be used for personal or freelance projects.
 
-### `present`
+➡️ [Read the full skill](skills/forge/SKILL.md)
 
-*Turn any wiki page or topic into a polished, self-contained HTML slide deck in minutes.*
+</details>
+
+<details id="skill-present">
+<summary><b><code>present</code></b> · Turn any wiki page or topic into a polished, self-contained HTML slide deck in minutes.</summary>
 
 This skill converts a knowledge-base page, a topic, or pasted content into a ready-to-present HTML slide deck. It fires on manual invocation (`/present`, `disable-model-invocation: true`) when the user asks to prep a presentation, build a talk or deck, or turn notes into slides for coworkers. It never triggers automatically because it has a side effect: writing a new artifact file to disk.
 
@@ -556,9 +712,25 @@ What makes it distinctive is its discipline around sourcing and honesty: every d
 
 Overall this is a lightweight orchestration pattern: combine a retrieval step (pull from a personal knowledge base), a drafting step (outline for user approval), and a delegated rendering step (hand visual polish to a specialized skill) into one repeatable pipeline. That pattern generalizes well beyond this specific setup, which is why it reads as a good showcase candidate.
 
-### `meeting-hud`
+➡️ [Read the full skill](skills/present/SKILL.md)
 
-*Near-real-time meeting intelligence HUD  -  captures audio, transcribes locally with whisper, and surfaces action items, decisions, and open questions live, with a hard local-only gate for sensitive meetings.*
+</details>
+
+
+## Ops & Automation
+
+<img src="docs/img/ops-automation.png" width="640" alt="Ops & Automation">
+
+Recurring cadence and orchestration: the system running itself.
+
+| Skill | One-liner |
+|---|---|
+| [`meeting-hud`](#user-content-skill-meeting-hud) | Near-real-time meeting intelligence HUD  -  captures audio, transcribes locally with whisper, and surfaces action items, decisions, and open questions live, with a hard local-only gate for sensitive meetings. |
+| [`servy-routine`](#user-content-skill-servy-routine) | Builds and arms cloud-scheduled Claude Code routines with safe-by-default guardrails baked in. |
+| [`session-handoff`](#user-content-skill-session-handoff) | Writes a tool-agnostic handoff note so any fresh session (or a different tool entirely) can pick up work cold. |
+
+<details id="skill-meeting-hud">
+<summary><b><code>meeting-hud</code></b> · Near-real-time meeting intelligence HUD  -  captures audio, transcribes locally with whisper, and surfaces action items, decisions, and open questions live, with a hard local-only gate for sensitive meetings.</summary>
 
 Meeting HUD gives Gera a live, continuously-updating heads-up display while a meeting is running (Teams, Zoom, Meet, or in-room). It fires on triggers like "meeting hud", "listen to this meeting", "track this call", "take notes on this meeting live", "start the hud", or the `/meeting-hud` slash command, and also whenever Gera says a meeting is about to start and wants Servy tracking it. It is built on a "MeetingHUD pattern": keep sensitive context close to the device, give the model only bounded evidence, and make output visible enough for a human to verify rather than trusting an opaque summary.
 
@@ -566,9 +738,12 @@ The workflow runs in clear steps. Step 0 is a hard gate: before doing anything, 
 
 What is distinctive here is the two-tier privacy design baked directly into the workflow rather than bolted on afterward  -  sensitive content literally never reaches the hosted model, only local regex and local LLM tiers touch it, and the assistant self-restricts what it will read based on the answer to one gating question. The skill also shares its audio-capture plumbing with a companion live-event co-watching skill, showing a reusable local-capture primitive. Transcripts are written to a local, gitignored directory and never reach any remote repo. It ends with a lightweight feedback loop: after each real meeting, ask what the HUD missed and patch the local pattern-matching rules the same session, so the local tiers improve empirically over time.
 
-### `servy-routine`
+➡️ [Read the full skill](skills/meeting-hud/SKILL.md)
 
-*Builds and arms cloud-scheduled Claude Code routines with safe-by-default guardrails baked in.*
+</details>
+
+<details id="skill-servy-routine">
+<summary><b><code>servy-routine</code></b> · Builds and arms cloud-scheduled Claude Code routines with safe-by-default guardrails baked in.</summary>
 
 This skill is the builder half of setting up a recurring cloud-hosted Claude Code "routine" (a scheduled agent run in Anthropic's cloud). It fires when the user says things like "schedule a routine," "create a cloud routine for X," "make this run twice daily / nightly / weekly," or when a separate decision-gate skill concludes that a task should become a cloud routine rather than a hook, a manual loop, or an interactive skill. Its job is to remove nearly all of the manual clicking around in the claude.ai routines UI by driving the whole setup through an API-backed tool, so the human only has to answer a handful of questions and, occasionally, paste in a secret.
 
@@ -576,9 +751,12 @@ Mechanically it works in eight steps: (0) triage whether this really should be a
 
 What is distinctive about it is the safety posture baked into every routine it creates by default: routines only ever push to a dated feature branch, never to main; secrets are only ever supplied via the cloud environment's variable store and are explicitly never expected to live in a `.env` file inside the routine's ephemeral clone; MCP connections are stripped by default on the theory that "instructions are not the same as capabilities" and a tool shouldn't be reachable unless the routine actually needs it; and every routine is instructed to fail loudly (notify + log + commit the failure trail) rather than silently swallowing errors. It also encodes a clean separation of concerns: the skill only edits the human-readable spec file to change a routine's behavior, never the routine configuration itself, so the routine config stays stable while its behavior evolves in version control.
 
-### `session-handoff`
+➡️ [Read the full skill](skills/servy-routine/SKILL.md)
 
-*Writes a tool-agnostic handoff note so any fresh session (or a different tool entirely) can pick up work cold.*
+</details>
+
+<details id="skill-session-handoff">
+<summary><b><code>session-handoff</code></b> · Writes a tool-agnostic handoff note so any fresh session (or a different tool entirely) can pick up work cold.</summary>
 
 This skill generates a structured, portable handoff note at the end of a working session so the next session, whether it is a fresh Claude Code context, a different tool, or even a different machine, can continue without re-deriving anything. It fires when the user says he's wrapping up, switching tools, clearing context, or when a session's token usage crosses a "fire band" threshold (roughly 25% of the model's context window), and it also proactively suggests itself when a long session is clearly winding down or when repeated `/compact` calls signal degrading quality.
 
@@ -586,9 +764,26 @@ The output follows a fixed template covering where the session started, decision
 
 What is distinctive about it is the discipline of tool-agnosticism and radical honesty: it explicitly bans vague references like "that function," insists on absolute paths and real names, and requires reporting half-done or broken work plainly rather than writing a flattering summary, on the reasoning that an inflated handoff just causes the next session to inherit a lie. It also draws a clean boundary against adjacent "pause work" tooling that saves internal state for a specific structured workflow, positioning itself instead as the general-purpose, human-readable note that works across any AI tool or workflow. The skill is inert until invoked (model-invocation is disabled so it only runs on an explicit request) and it explicitly does not continue the work itself, its job ends at writing the note and pointing at open trackers.
 
-### `finances`
+➡️ [Read the full skill](skills/session-handoff/SKILL.md)
 
-*Deterministic personal-finance brain for logging expenses, tracking envelope budgets, closing pay periods, and planning debt payoff.*
+</details>
+
+
+## Life & Personal
+
+<img src="docs/img/life-personal.png" width="640" alt="Life & Personal">
+
+The assistant beyond work: voice, learning, life planning.
+
+| Skill | One-liner |
+|---|---|
+| [`finances`](#user-content-skill-finances) | Deterministic personal-finance brain for logging expenses, tracking envelope budgets, closing pay periods, and planning debt payoff. |
+| [`rnd`](#user-content-skill-rnd) | A gamified XP/quest system that turns "become an expert R&D engineer" into a daily climb across 7 competency pillars. |
+| [`talk`](#user-content-skill-talk) | A live voice session with your assistant on the Mac: you speak, it speaks back  -  including an English-coaching mode. |
+| [`wheel-of-life`](#user-content-skill-wheel-of-life) | A structured, interview-driven "wheel of life" check-in that scores 9 life spokes on evidence, not vibes, and ends with one 90-day plan. |
+
+<details id="skill-finances">
+<summary><b><code>finances</code></b> · Deterministic personal-finance brain for logging expenses, tracking envelope budgets, closing pay periods, and planning debt payoff.</summary>
 
 This skill turns Claude into an "educational financial analyst" for personal money management, explicitly not a licensed advisor. It fires on natural money talk: logging an expense ("I spent X on Y"), checking budget status mid-period, closing out a pay period, planning debt payoff, or a first-time onboarding conversation about someone's full financial picture. All math is deterministic and routed through a companion `scripts/finances.py` script rather than eyeballed by the model, and all real data (profile, envelopes, ledger, period snapshots) lives under a gitignored `finances/` folder that the skill actively guards against accidental commits before any write.
 
@@ -596,9 +791,12 @@ The skill defines four operating modes. Onboard walks through income, debts (wit
 
 What's distinctive is the hard separation between reasoning and arithmetic: every number flows through the script, never through model estimation, and a pre-write gitignore assertion acts as a hard stop if the data boundary is ever misconfigured. It's also currency- and region-aware (MXN formatting, envelope-based zero-based budgeting, and grounding notes referencing Mexico-specific instruments like CETES, Afore, buró de crédito, and SAT) and enforces a strict local-only PII rule: salary, debts, balances, and transactions never get routed to any external or multi-brain model, only public research questions are allowed to leave the local context.
 
-### `rnd`
+➡️ [Read the full skill](skills/finances/SKILL.md)
 
-*A gamified XP/quest system that turns "become an expert R&D engineer" into a daily climb across 7 competency pillars.*
+</details>
+
+<details id="skill-rnd">
+<summary><b><code>rnd</code></b> · A gamified XP/quest system that turns "become an expert R&D engineer" into a daily climb across 7 competency pillars.</summary>
 
 R&D Ascent turns a vague ambition ("grow into an expert R&D engineer who can lead") into a deterministic, game-like progression system. It tracks XP, levels, a 10-rank ladder (R&D Initiate through Principal R&D Lead), streaks, and badges across 7 competency pillars (things like Agentic AI, Physical AI, English, Speaker skills, R&D Method, and Leadership, plus one pillar named after the owner's current work program). All state and leveling math is deterministic and lives in a companion script; the skill's job is never to eyeball or fake XP, only to call the script and then wrap the result in a warm, coach-like nudge.
 
@@ -606,21 +804,36 @@ It fires on natural language like "what should I learn today," "I read/built/shi
 
 What's distinctive here is the hard separation between deterministic state (a script that owns XP math and asserts its data directory is gitignored before any write) and the LLM's role as a motivational layer that phrases nudges, matches loose descriptions to catalog quests, and decides when a real achievement deserves off-catalog XP. It also self-enforces a personal/public-only data boundary, explicitly refusing to let employer customer data or client specifics enter a quest note. A companion daily script can push the day's quest to a notification channel unattended, and a dashboard view can read the same progress file, so the same state powers both a chat interaction and a glanceable UI.
 
-### `talk`
+➡️ [Read the full skill](skills/rnd/SKILL.md)
 
-*test*
+</details>
 
-test
+<details id="skill-talk">
+<summary><b><code>talk</code></b> · A live voice session with your assistant on the Mac: you speak, it speaks back  -  including an English-coaching mode.</summary>
 
-### `wheel-of-life`
+`talk` runs a spoken conversation loop on the local machine: you talk, the assistant hears it, replies in text, and speaks the reply back through local text-to-speech. No meeting software, no cloud audio pipeline: microphone capture, transcription, and synthesis all run locally, which keeps voice sessions private by construction.
 
-*A structured, interview-driven "wheel of life" check-in that scores 9 life spokes on evidence, not vibes, and ends with one 90-day plan.*
+The core mode is a natural conversation (thinking out loud, debriefing a day, working through a decision by voice). A second mode is deliberate English practice for a non-native speaker: the assistant keeps the conversation going while correcting phrasing, suggesting more natural constructions, and drilling vocabulary in context.
+
+It is an in-session loop, so everything said by voice lands in the same working context as the rest of the session: you can voice-discuss a plan and then say "write that down" and it files the capture like any other conversation.
+
+➡️ [Read the full skill](skills/talk/SKILL.md)
+
+</details>
+
+<details id="skill-wheel-of-life">
+<summary><b><code>wheel-of-life</code></b> · A structured, interview-driven "wheel of life" check-in that scores 9 life spokes on evidence, not vibes, and ends with one 90-day plan.</summary>
 
 Wheel of Life turns a classic coaching exercise into an interview-driven Claude Code skill. It fires when the user asks for a life review, a check-in, or says things like "rate my life" or "how's my life balance"  -  and it deliberately holds back if the request was just a passing comment, offering first and waiting for a yes before launching a long personal interview.
 
 The skill walks nine spokes grouped into three areas: Health (body, mind, soul), Work (growth, money, mission), and Relationships (family, romance, friends). Each spoke is scored 1-10, but the score is not "how good is this area"  -  it is satisfaction with the current investment and its visible results. The interview method is the distinctive part: instead of asking "rate your body 1-10" cold, it first asks for concrete recent behavior ("walk me through yesterday physically") and only then proposes a score the user can confirm or correct. It asks one question at a time, checkpoints each answer to a capture file before moving on (borrowing the mechanic from a companion "grill-me" skill), and gives no advice at all until every spoke has been scored, so the interviewer's opinions don't bias later answers.
 
 Once every spoke is scored, the skill moves through four remaining phases: it shows all nine scores as a table with trend deltas against any prior run, diagnoses the two or three lowest spokes and looks for a single constraint that, if fixed, would lift the others (falling back honestly to "no single constraint, here's the pattern instead" if one doesn't exist), proposes exactly three 90-day actions tied to that constraint, and defines a light weekly cadence to keep it alive. It can optionally render an HTML radar-chart artifact of the scores. Distinctive touches: it explicitly checks for and compares against a previous run for trend tracking, keeps all raw answers in a gitignored capture directory so committed files never carry personal specifics, drops the structured process entirely if something emotionally heavy comes up mid-interview, and is tuned to run at low reasoning effort for the interview itself while escalating only for the diagnosis and strategy synthesis.
+
+➡️ [Read the full skill](skills/wheel-of-life/SKILL.md)
+
+</details>
+
 
 ---
 
