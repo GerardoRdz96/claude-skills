@@ -4,6 +4,8 @@
 
 This is the working skill library of **Servy**, my personal AI operating system built on [Claude Code](https://claude.com/claude-code). A colleague asked how my AI workstation is set up, so here it is: **51 skills**, shared as-is from the machine that runs my days. The only things held back are skills whose whole purpose is my employer's internal work or my own product brand.
 
+<p align="center"><img src="docs/img/hero.png" width="820" alt="The AI workstation"></p>
+
 ## How to read this repo
 
 Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/docs/en/skills): a `SKILL.md` with frontmatter (name, description, triggers) plus any reference files and scripts it ships. Drop a folder into your own `.claude/skills/` to try one.
@@ -14,6 +16,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 ### Building & Shipping
 
+<img src="docs/img/building-shipping.png" width="640" alt="Building & Shipping">
+
 | Skill | What it does |
 |---|---|
 | [`deepfork`](skills/deepfork/SKILL.md) | Reverse-engineer any open-source repo into a clean understanding doc and a rebuildable blueprint, then clean-room rebuild your own customized version. |
@@ -21,6 +25,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 | [`taste-skill`](skills/taste-skill/SKILL.md) | Anti-slop frontend design doctrine that reads the brief, picks a real design system, and gates the build behind a 60-plus-item pre-flight checklist before it ships. |
 
 ### Meta-skills (skills that build skills/agents)
+
+<img src="docs/img/meta-skills.png" width="640" alt="Meta-skills (skills that build skills/agents)">
 
 | Skill | What it does |
 |---|---|
@@ -47,6 +53,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 ### Research & Knowledge
 
+<img src="docs/img/research-knowledge.png" width="640" alt="Research & Knowledge">
+
 | Skill | What it does |
 |---|---|
 | [`cowatch`](skills/cowatch/SKILL.md) | Co-watch a public live stream with your assistant: rolling local transcript, near-real-time reactions. |
@@ -60,6 +68,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 ### Quality & Review
 
+<img src="docs/img/quality-review.png" width="640" alt="Quality & Review">
+
 | Skill | What it does |
 |---|---|
 | [`aegis`](skills/aegis/SKILL.md) | Turns any AI system into a scored NIST AI RMF audit-readiness report plus a tested incident-response playbook. |
@@ -72,6 +82,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 ### Money & Freelance
 
+<img src="docs/img/money-freelance.png" width="640" alt="Money & Freelance">
+
 | Skill | What it does |
 |---|---|
 | [`bottleneck`](skills/bottleneck/SKILL.md) | Find the one constraint actually capping your business, and build an action plan around it instead of everything else. |
@@ -79,6 +91,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 | [`workana`](skills/workana/SKILL.md) | Scans Workana's public job board for fit-ranked freelance leads and drafts a tailored, ready-to-paste bid, read-only and human-submitted. |
 
 ### Media & Presentation
+
+<img src="docs/img/media-presentation.png" width="640" alt="Media & Presentation">
 
 | Skill | What it does |
 |---|---|
@@ -88,6 +102,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 
 ### Ops & Automation
 
+<img src="docs/img/ops-automation.png" width="640" alt="Ops & Automation">
+
 | Skill | What it does |
 |---|---|
 | [`meeting-hud`](skills/meeting-hud/SKILL.md) | Near-real-time meeting intelligence HUD , captures audio, transcribes locally with whisper, and surfaces action items, decisions, and open questions live, with a hard local-only gate for sensitive meetings. |
@@ -95,6 +111,8 @@ Each folder under `skills/` is one [Claude Code skill](https://code.claude.com/d
 | [`session-handoff`](skills/session-handoff/SKILL.md) | Writes a tool-agnostic handoff note so any fresh session (or a different tool entirely) can pick up work cold. |
 
 ### Life & Personal
+
+<img src="docs/img/life-personal.png" width="640" alt="Life & Personal">
 
 | Skill | What it does |
 |---|---|
