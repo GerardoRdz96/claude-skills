@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "properties": {
+    "brand": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "tagline": {"type": "string"},
+        "positioning": {"type": "string"}
+      }
+    },
+    "color_palette": {
+      "type": "object",
+      "properties": {
+        "primary": {"type": "string"},
+        "secondary": {"type": "array", "items": {"type": "string"}},
+        "accent": {"type": "array", "items": {"type": "string"}},
+        "neutrals": {
+          "type": "object",
+          "properties": {
+            "background": {"type": "string"},
+            "surface": {"type": "string"},
+            "text_primary": {"type": "string"},
+            "text_muted": {"type": "string"},
+            "border": {"type": "string"}
+          }
+        },
+        "gradients": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "heading_font_family": {"type": "string"},
+        "heading_weights": {"type": "array", "items": {"type": "string"}},
+        "heading_feel": {"type": "string"},
+        "body_font_family": {"type": "string"},
+        "body_weights": {"type": "array", "items": {"type": "string"}},
+        "body_feel": {"type": "string"},
+        "scale_relationship": {"type": "string"}
+      }
+    },
+    "layout_vibe": {
+      "type": "object",
+      "properties": {
+        "density": {"type": "string", "enum": ["spacious", "balanced", "dense", "ultra-dense"]},
+        "grid": {"type": "string"},
+        "hero_pattern": {"type": "string"},
+        "section_rhythm": {"type": "string"},
+        "imagery_style": {"type": "string"}
+      }
+    },
+    "motion_and_interaction": {
+      "type": "object",
+      "properties": {
+        "scroll_behavior": {"type": "string"},
+        "hover_states": {"type": "string"},
+        "transitions": {"type": "string"},
+        "notable_micro_interactions": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "copy_tone": {
+      "type": "object",
+      "properties": {
+        "voice": {"type": "string"},
+        "headline_examples": {"type": "array", "items": {"type": "string"}},
+        "cta_examples": {"type": "array", "items": {"type": "string"}},
+        "sentence_length": {"type": "string", "enum": ["short", "medium", "long", "mixed"]},
+        "jargon_level": {"type": "string", "enum": ["none", "light", "heavy"]}
+      }
+    },
+    "what_makes_it_distinctive": {"type": "array", "items": {"type": "string"}},
+    "what_to_steal": {"type": "array", "items": {"type": "string"}},
+    "do_not_steal": {"type": "array", "items": {"type": "string"}}
+  }
+}

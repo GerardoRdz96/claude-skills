@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
+<title>SPARK Feasibility Verdict</title>
+<!--
+  ────────────────────────────────────────────────────────────────────────────
+  spark · verdict-template.html  (TOKEN form — do not hand-edit content)
+  Built through frontend-design + taste-skill (Front-End Review Law). The
+  deterministic filler is render_verdict.py: it clones the *_BLOCK regions per
+  item, substitutes {{TOKENS}}, strips every comment, and HARD-FAILS if any
+  {{token}}, href="#", or block marker survives — a partial fill can never ship
+  stale text. Single self-contained file; type loads from the Google Fonts CDN
+  with a system-font fallback stack so it degrades gracefully offline.
+
+  Identity: engineering-bench / oscilloscope test report. Bold stamped verdict,
+  instrument-readout evidence, LED-bargraph confidence. Deliberately NOT the
+  calm research-briefing sibling (storm-research).
+
+  Scalars: {{VERDICT}} {{VERDICT_CLASS}} {{HEADLINE}} {{HYPOTHESIS}} {{WHAT_BUILT}}
+           {{SPIKE_REF}} {{ARTIFACT_TYPE}} {{TIME_BOX}} {{CONFIDENCE}}
+           {{CONF_CLASS}} {{CONF_SEGS}} {{WHAT_WOULD_CHANGE}} {{NEXT_STEP}}
+           {{DISSENT}} {{CODEX_NOTE}} {{TOPIC}} {{READER}} {{GOAL}} {{DATE}}
+           {{CRITICS_COUNT}} {{FLIP_COUNT}}
+  Blocks:  EVIDENCE_BLOCK -> {{EV_METRIC}} {{EV_BASELINE}} {{EV_RESULT}}
+           {{EV_DELTA}} {{EV_PASS_CLASS}} {{EV_PASS_LABEL}}
+           RISK_BLOCK -> {{RISK}}
+  ────────────────────────────────────────────────────────────────────────────
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0d12; --bg-2:#0c1119; --panel:#10161f; --panel-2:#121a25;
+    --line:rgba(143,165,191,.14); --line-2:rgba(143,165,191,.26);
+    --ink:#e6ecf3; --ink-soft:#c2ccd9; --muted:#93a1b2; --faint:#697585;
+    --signal:#3ad6f5; --signal-deep:#1390ad; --signal-soft:rgba(58,214,245,.12);
+    --go:#2fe08a; --go-soft:rgba(47,224,138,.14);
+    --nogo:#ff5266; --nogo-soft:rgba(255,82,102,.14);
+    --pivot:#ffb02e; --pivot-soft:rgba(255,176,46,.14);
+    --f-display:"Chakra Petch","IBM Plex Sans",system-ui,sans-serif;
+    --f-sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--f-sans);color:var(--ink-soft);background:var(--bg);
+    line-height:1.62;-webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;overflow-x:hidden;position:relative;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(120% 80% at 18% -8%, rgba(58,214,245,.07), transparent 52%),
+      radial-gradient(90% 70% at 100% 0%, rgba(47,224,138,.05), transparent 50%),
+      linear-gradient(180deg, #0b0f15, var(--bg) 60%);
+  }
+  .topline{height:3px;background:linear-gradient(90deg,var(--signal),var(--go) 55%,transparent)}
+
+  .frame{max-width:1040px;margin:0 auto;padding:clamp(22px,4vw,40px) clamp(18px,5vw,56px) 80px}
+
+  /* ── instrument top bar ──────────────────────────────────────────────── */
+  .topbar{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    border-bottom:1px solid var(--line);padding-bottom:16px;
+  }
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .bolt{width:26px;height:26px;color:var(--signal);flex:0 0 auto;
+    filter:drop-shadow(0 0 8px rgba(58,214,245,.45))}
+  .brand-name{font-family:var(--f-display);font-weight:700;font-size:19px;
+    letter-spacing:.26em;color:var(--ink);text-indent:.26em}
+  .brand-sub{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--faint);padding-left:10px;
+    border-left:1px solid var(--line-2)}
+  .topbar-right{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--muted)}
+
+  /* ── hero ────────────────────────────────────────────────────────────── */
+  .hero{position:relative;margin-top:clamp(26px,5vw,46px);
+    display:grid;grid-template-columns:minmax(210px,.85fr) 1.5fr;
+    gap:clamp(24px,4vw,52px);align-items:center}
+  .hero::before{
+    content:"";position:absolute;inset:-26px -40px;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(to right, rgba(58,214,245,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(58,214,245,.06) 1px, transparent 1px);
+    background-size:32px 32px;
+    -webkit-mask-image:radial-gradient(90% 92% at 36% 28%, #000 0%, #000 12%, transparent 38%);
+            mask-image:radial-gradient(90% 92% at 36% 28%, #000 0%, #000 12%, transparent 38%);
+  }
+  .hero > *{position:relative;z-index:1}
+
+  .stamp-wrap{display:flex;justify-content:center}
+  .stamp{
+    --vd:var(--pivot);--vd-soft:var(--pivot-soft);
+    position:relative;display:inline-flex;flex-direction:column;align-items:center;
+    gap:.32rem;padding:1.05rem 1.9rem 1.2rem;
+    border:2px solid var(--vd);border-radius:12px;color:var(--vd);
+    background:var(--vd-soft);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), 0 14px 40px -22px var(--vd);
+    transform:rotate(-2.4deg);
+  }
+  .stamp::after{
+    content:"";position:absolute;inset:6px;border-radius:7px;
+    border:1px dashed color-mix(in srgb, var(--vd) 42%, transparent);
+    pointer-events:none;opacity:.7;
+  }
+  .stamp-kicker{font-family:var(--f-mono);font-size:10px;letter-spacing:.42em;
+    text-transform:uppercase;opacity:.85}
+  .stamp-word{font-family:var(--f-display);font-weight:700;line-height:.92;
+    font-size:clamp(2.9rem,9vw,4.7rem);letter-spacing:.01em}
+  .stamp-sub{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-soft);opacity:.7}
+  .vd--go{--vd:var(--go);--vd-soft:var(--go-soft)}
+  .vd--nogo{--vd:var(--nogo);--vd-soft:var(--nogo-soft)}
+  .vd--pivot{--vd:var(--pivot);--vd-soft:var(--pivot-soft)}
+
+  .headline{font-family:var(--f-display);font-weight:600;color:var(--ink);
+    font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.16;letter-spacing:-.012em;
+    max-width:24ch}
+  .metastrip{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:20px}
+  .chip{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;padding:5px 11px;border-radius:6px;
+    border:1px solid var(--line-2);color:var(--ink-soft);background:rgba(255,255,255,.02)}
+  .chip.type{color:var(--signal);border-color:var(--signal-deep);background:var(--signal-soft)}
+  .msep{width:1px;height:18px;background:var(--line-2)}
+  .mi{display:flex;align-items:baseline;gap:8px;font-size:13px;color:var(--ink-soft)}
+  .mi .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--muted)}
+  .mi.stress .v{color:var(--ink)}
+
+  /* ── sections ────────────────────────────────────────────────────────── */
+  .sec{margin-top:clamp(40px,6vw,62px)}
+  .h{display:flex;align-items:center;gap:13px;margin-bottom:18px;
+    font-family:var(--f-display);font-weight:600;font-size:15px;
+    letter-spacing:.04em;color:var(--ink);text-transform:uppercase}
+  .h::before{content:"";width:9px;height:9px;flex:0 0 auto;
+    background:var(--signal);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+    box-shadow:0 0 10px rgba(58,214,245,.5)}
+  .h::after{content:"";flex:1;height:1px;
+    background:linear-gradient(90deg,var(--line-2),transparent)}
+
+  .lede{font-size:1.18rem;line-height:1.55;color:var(--ink);max-width:60ch}
+  .topic{font-family:var(--f-display);font-weight:500;font-size:clamp(1.25rem,2.6vw,1.7rem);
+    line-height:1.28;color:var(--ink);letter-spacing:-.01em;max-width:26ch}
+  .goal-row{display:flex;align-items:baseline;gap:12px;margin-top:18px;
+    padding-top:16px;border-top:1px solid var(--line)}
+  .goal-row .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--signal);flex:0 0 auto;padding-top:2px}
+  .goal-row .v{font-size:1.02rem;color:var(--ink-soft)}
+
+  /* hypothesis panel */
+  .hyp{position:relative;border:1px solid var(--line-2);border-radius:14px;
+    background:linear-gradient(180deg, rgba(58,214,245,.05), rgba(58,214,245,.01));
+    padding:24px 26px 24px 30px;overflow:hidden}
+  .hyp::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--signal),var(--signal-deep))}
+  .hyp .tag{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--signal);margin-bottom:11px;display:block}
+  .hyp p{font-size:1.12rem;line-height:1.55;color:var(--ink)}
+
+  /* spike */
+  .built{font-size:1.05rem;line-height:1.6;color:var(--ink-soft);max-width:64ch}
+  .ref{display:inline-flex;align-items:center;gap:11px;margin-top:18px;flex-wrap:wrap;
+    padding:9px 14px;border:1px solid var(--signal-deep);border-radius:8px;
+    background:var(--signal-soft)}
+  .ref .k{font-family:var(--f-mono);font-size:10px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted)}
+  .spike-ref{font-family:var(--f-mono);font-size:13px;color:var(--signal);
+    word-break:break-all}
+
+  /* ── evidence readout ────────────────────────────────────────────────── */
+  .readout-cap{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--faint);margin:-6px 0 16px}
+  .table-wrap{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;
+    background:var(--bg-2)}
+  table.readout{width:100%;border-collapse:collapse;font-size:.95rem}
+  table.readout thead th{
+    font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-soft);text-align:left;font-weight:500;
+    padding:13px 18px;background:rgba(143,165,191,.06);
+    border-bottom:1px solid var(--line-2)}
+  table.readout tbody td{padding:15px 18px;border-bottom:1px solid var(--line);
+    vertical-align:top}
+  table.readout tbody tr:last-child td{border-bottom:0}
+  table.readout tbody tr{transition:background .2s}
+  table.readout tbody tr:hover{background:rgba(58,214,245,.04)}
+  td.metric{color:var(--ink);font-weight:500;max-width:30ch}
+  td.mono{font-family:var(--f-mono);font-size:.86rem;color:var(--ink-soft);white-space:normal;word-break:break-word}
+  td.res{color:var(--ink)}
+  td.delta{color:var(--signal)}
+  td.test{white-space:nowrap}
+  .badge{font-family:var(--f-mono);font-weight:600;font-size:11px;letter-spacing:.14em;
+    padding:4px 11px;border-radius:6px;border:1px solid;display:inline-block}
+  .ev--pass{color:#73f0b4;border-color:var(--go);background:var(--go-soft)}
+  .ev--fail{color:#ff8a98;border-color:var(--nogo);background:var(--nogo-soft)}
+
+  /* ── confidence LED bargraph ─────────────────────────────────────────── */
+  .conf{display:flex;align-items:center;gap:clamp(18px,3vw,30px);flex-wrap:wrap}
+  .conf-meter{display:flex;gap:6px;flex:1;min-width:240px;--seg-on:var(--go);
+    padding:6px;border:1px solid var(--line-2);border-radius:4px;
+    background-color:var(--bg-2);
+    background-image:
+      linear-gradient(to right, rgba(58,214,245,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(58,214,245,.06) 1px, transparent 1px);
+    background-size:13px 13px}
+  .conf-meter.mid{--seg-on:var(--pivot)}
+  .conf-meter.low{--seg-on:var(--nogo)}
+  .seg{flex:1;height:38px;border-radius:1px;background:rgba(160,180,204,.16);
+    border:1px solid rgba(160,180,204,.34)}
+  .seg.on{background:var(--seg-on);border-color:var(--seg-on);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 0 14px -4px var(--seg-on)}
+  .conf-read{display:flex;align-items:baseline;gap:4px;font-family:var(--f-display)}
+  .conf-read .big{font-weight:700;font-size:clamp(2.6rem,7vw,3.4rem);color:var(--ink);
+    line-height:1}
+  .conf-read .den{font-family:var(--f-mono);font-size:1.1rem;color:var(--faint)}
+  .conf-cap{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--faint);margin-top:14px}
+
+  /* ── risks ───────────────────────────────────────────────────────────── */
+  ul.risks{list-style:none;display:grid;gap:2px;
+    border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg-2)}
+  li.risk{display:flex;gap:14px;align-items:flex-start;padding:15px 18px;
+    background:var(--panel);border-bottom:1px solid var(--line)}
+  ul.risks li:last-child{border-bottom:0}
+  li.risk .tick{flex:0 0 auto;width:7px;height:7px;margin-top:9px;border-radius:2px;
+    background:var(--pivot);box-shadow:0 0 8px -1px var(--pivot)}
+  li.risk span:last-child{color:var(--ink-soft);font-size:1rem;line-height:1.5}
+
+  /* ── callouts: dissent + codex ───────────────────────────────────────── */
+  .callout{position:relative;border-radius:14px;padding:22px 24px 22px 26px;
+    border:1px solid var(--line-2);overflow:hidden;margin-top:clamp(40px,6vw,62px)}
+  .callout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+  .callout-tag{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.24em;
+    text-transform:uppercase;font-weight:600;margin-bottom:12px;display:flex;
+    align-items:center;gap:9px}
+  .callout p{font-size:1.06rem;line-height:1.56;color:var(--ink)}
+  .dissent{background:linear-gradient(180deg, rgba(255,176,46,.07), rgba(255,176,46,.015))}
+  .dissent::before{background:linear-gradient(var(--pivot),#c8801a)}
+  .dissent .callout-tag{color:var(--pivot)}
+  .dissent .callout-tag::before{content:"";width:8px;height:8px;
+    background:var(--pivot);clip-path:polygon(50% 0,100% 100%,0 100%)}
+  .codex{background:linear-gradient(180deg, rgba(58,214,245,.06), rgba(58,214,245,.012))}
+  .codex::before{background:linear-gradient(var(--signal),var(--signal-deep))}
+  .codex .callout-tag{color:var(--signal)}
+  .codex .callout-tag::before{content:"";width:8px;height:8px;border-radius:50%;
+    border:2px solid var(--signal)}
+
+  /* ── flip + next ─────────────────────────────────────────────────────── */
+  .flip,.next{display:flex;gap:16px;align-items:flex-start;
+    border:1px solid var(--line-2);border-radius:14px;padding:22px 24px;background:var(--panel)}
+  .flip-ico,.next-arrow{flex:0 0 auto;font-family:var(--f-display);font-weight:700;
+    line-height:1;width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+    border-radius:10px;font-size:1.5rem}
+  .flip-ico{color:var(--signal);background:var(--signal-soft);border:1px solid var(--signal-deep)}
+  .next{background:linear-gradient(180deg, rgba(47,224,138,.08), rgba(47,224,138,.02));
+    border-color:color-mix(in srgb, var(--go) 45%, transparent)}
+  .next-arrow{color:var(--go);background:var(--go-soft);
+    border:1px solid color-mix(in srgb, var(--go) 55%, transparent)}
+  .flip p,.next p{font-size:1.06rem;line-height:1.55;color:var(--ink);align-self:center}
+  .next p{font-weight:500}
+
+  /* ── footer ──────────────────────────────────────────────────────────── */
+  .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--faint);
+    text-transform:uppercase}
+  .foot .note{color:var(--muted);letter-spacing:.04em;text-transform:none;
+    font-family:var(--f-sans);font-size:13px}
+
+  /* ── responsive ──────────────────────────────────────────────────────── */
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;gap:30px;text-align:left}
+    .stamp-wrap{justify-content:flex-start}
+    .stamp{transform:rotate(-1.6deg)}
+    .headline{max-width:none}
+  }
+  @media (max-width:640px){
+    .brand-sub{display:none}
+    .metastrip{gap:13px 14px}
+    .msep{display:none}
+    .metastrip .mi{width:100%}
+    table.readout thead{position:absolute;width:1px;height:1px;overflow:hidden;
+      clip:rect(0 0 0 0);white-space:nowrap}
+    table.readout,table.readout tbody,table.readout tr,table.readout td{display:block;width:100%}
+    table.readout tbody tr{padding:8px 0;border-bottom:1px solid var(--line-2)}
+    table.readout tbody tr:last-child{border-bottom:0}
+    table.readout tbody td{display:flex;flex-direction:column;align-items:flex-start;gap:3px;
+      padding:9px 16px;border:0;white-space:normal}
+    td.mono{white-space:normal;text-align:left}
+    table.readout tbody td::before{content:attr(data-k);font-family:var(--f-mono);
+      font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--signal);
+      opacity:.85}
+    td.metric::before{margin-bottom:1px}
+  }
+
+  /* ── motion + a11y ───────────────────────────────────────────────────── */
+  a,.badge,.stamp{transition:transform .2s ease, box-shadow .2s ease}
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }
+
+  /* ── print ───────────────────────────────────────────────────────────── */
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff;color:#16202c}
+    body::before,.topline,.hero::before{display:none!important}
+    .frame{max-width:none;padding:0}
+    .brand-name,.headline,.topic,.hyp p,.conf-read .big,.callout p,.flip p,.next p,
+    td.metric,td.res,.h{color:#0c141d}
+    .ink,.lede{color:#1c2733}
+    .table-wrap,.hyp,.callout,.flip,.next,ul.risks,.ref{
+      border-color:#c8d1db!important;background:#fff!important;box-shadow:none!important}
+    table.readout thead th{background:#f1f4f8;color:#46505c;border-color:#c8d1db}
+    table.readout tbody td{border-color:#e2e7ee;color:#1c2733}
+    .seg{background:#e7ebf1;border-color:#cfd6df}
+    .stamp{box-shadow:none;transform:rotate(-2deg)}
+    .badge{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+    .seg.on,.badge,.chip.type,.stamp{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<div class="frame">
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="bolt" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13.2 2 4 13.6h6.2L9.4 22 20 9.6h-6.4L13.2 2Z" fill="currentColor"/>
+      </svg>
+      <span class="brand-name">SPARK</span>
+      <span class="brand-sub">feasibility verdict</span>
+    </div>
+    <div class="topbar-right">decision record</div>
+  </header>
+
+  <!-- 1 · HERO ─────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Verdict">
+    <div class="stamp-wrap">
+      <div class="stamp {{VERDICT_CLASS}}">
+        <span class="stamp-kicker">verdict</span>
+        <span class="stamp-word">{{VERDICT}}</span>
+        <span class="stamp-sub">feasibility call</span>
+      </div>
+    </div>
+    <div class="hero-body">
+      <h1 class="headline">{{HEADLINE}}</h1>
+      <div class="metastrip">
+        <span class="chip type">{{ARTIFACT_TYPE}}</span>
+        <span class="chip">{{TIME_BOX}}</span>
+        <span class="msep" aria-hidden="true"></span>
+        <span class="mi"><span class="k">date</span><span class="v">{{DATE}}</span></span>
+        <span class="mi"><span class="k">for</span><span class="v">{{READER}}</span></span>
+        <span class="mi stress"><span class="k">stress</span><span class="v">{{CRITICS_COUNT}} critics · {{FLIP_COUNT}} call-flipping concerns</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · THE QUESTION ─────────────────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">the question</h2>
+    <p class="topic">{{TOPIC}}</p>
+    <div class="goal-row">
+      <span class="k">decision</span>
+      <span class="v">{{GOAL}}</span>
+    </div>
+  </section>
+
+  <!-- 3 · HYPOTHESIS ───────────────────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">hypothesis under test</h2>
+    <div class="hyp">
+      <span class="tag">the falsifiable bet</span>
+      <p>{{HYPOTHESIS}}</p>
+    </div>
+  </section>
+
+  <!-- 4 · THE SPIKE ────────────────────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">the spike we built</h2>
+    <p class="built">{{WHAT_BUILT}}</p>
+    <div class="ref">
+      <span class="k">lives at</span>
+      <code class="spike-ref">{{SPIKE_REF}}</code>
+    </div>
+  </section>
+
+  <!-- 5 · EVIDENCE READOUT ─────────────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">evidence readout</h2>
+    <p class="readout-cap">measured result against baseline</p>
+    <div class="table-wrap">
+      <table class="readout">
+        <thead>
+          <tr>
+            <th scope="col">metric</th>
+            <th scope="col">baseline</th>
+            <th scope="col">result</th>
+            <th scope="col">delta</th>
+            <th scope="col">test</th>
+          </tr>
+        </thead>
+        <tbody>
+<!--EVIDENCE_BLOCK-->
+          <tr>
+            <td class="metric" data-k="Metric">{{EV_METRIC}}</td>
+            <td class="mono" data-k="Baseline">{{EV_BASELINE}}</td>
+            <td class="mono res" data-k="Result">{{EV_RESULT}}</td>
+            <td class="mono delta" data-k="Delta">{{EV_DELTA}}</td>
+            <td class="test" data-k="Test"><span class="badge {{EV_PASS_CLASS}}">{{EV_PASS_LABEL}}</span></td>
+          </tr>
+<!--/EVIDENCE_BLOCK-->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 6 · CONFIDENCE ───────────────────────────────────────────────────── -->
+  <section class="sec" aria-label="Confidence">
+    <h2 class="h">confidence</h2>
+    <div class="conf">
+      <div class="conf-meter {{CONF_CLASS}}" role="img" aria-label="Confidence {{CONFIDENCE}} of 10">{{CONF_SEGS}}</div>
+      <div class="conf-read"><span class="big">{{CONFIDENCE}}</span><span class="den">/ 10</span></div>
+    </div>
+    <p class="conf-cap">how strongly the spike backs this call</p>
+  </section>
+
+  <!-- 7 · KEY RISKS ────────────────────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">key risks</h2>
+    <ul class="risks">
+<!--RISK_BLOCK-->
+      <li class="risk"><span class="tick" aria-hidden="true"></span><span>{{RISK}}</span></li>
+<!--/RISK_BLOCK-->
+    </ul>
+  </section>
+
+  <!-- 8 · DISSENT (preserved, visible) ─────────────────────────────────── -->
+  <aside class="callout dissent" aria-label="Preserved dissent">
+    <div class="callout-tag">dissent on record</div>
+    <p>{{DISSENT}}</p>
+  </aside>
+
+  <!-- 9 · WHAT WOULD FLIP THE CALL ─────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">what would flip the call</h2>
+    <div class="flip">
+      <span class="flip-ico" aria-hidden="true">&#8644;</span>
+      <p>{{WHAT_WOULD_CHANGE}}</p>
+    </div>
+  </section>
+
+  <!-- 10 · RECOMMENDED NEXT STEP ───────────────────────────────────────── -->
+  <section class="sec">
+    <h2 class="h">recommended next step</h2>
+    <div class="next">
+      <span class="next-arrow" aria-hidden="true">&#8594;</span>
+      <p>{{NEXT_STEP}}</p>
+    </div>
+  </section>
+
+  <!-- 11 · INDEPENDENT CROSS-LINEAGE REVIEW ────────────────────────────── -->
+  <aside class="callout codex" aria-label="Independent cross-lineage review">
+    <div class="callout-tag">independent review · cross-lineage</div>
+    <p>{{CODEX_NOTE}}</p>
+  </aside>
+
+  <footer class="foot">
+    <span>SPARK feasibility verdict</span>
+    <span class="note">A spike is a throwaway. The verdict is the keeper.</span>
+  </footer>
+
+</div>
+</body>
+</html>
